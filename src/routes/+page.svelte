@@ -37,10 +37,10 @@
 		{#each buttons as { txt }}
 			<button
 				class="butt"
-				on:focus={() => {
+				on:mouseover={() => {
 					buttsound.play();
 				}}
-				on:mouseover={() => {
+				on:focus={() => {
 					buttsound.play();
 				}}
 			>
