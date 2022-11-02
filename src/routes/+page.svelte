@@ -12,9 +12,22 @@
 		height: 100%;
 		width: 100vw;
 		background-color: black;
+		display: flex;
+		justify-content: center;
+		align-items: center;
 	}
 	#buttons {
 		height: 100%;
 		width: 100%;
+		text-align: center;
+	}
+	#buttons button {
+		padding: 1rem;
+		border-radius: 0.8rem;
+		background: transparent;
+		color: aliceblue;
+		border: 3px solid aliceblue;
+		margin: 0.5rem;
+		font-size: 2rem;
 	}
 </style>
