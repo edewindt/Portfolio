@@ -7,10 +7,4 @@
 </body>
 
 <style>
-	body {
-		min-height: 100vh;
-		height: 100%;
-		width: 100%;
-		background-color: red;
-	}
 </style>
