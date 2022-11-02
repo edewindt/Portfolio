@@ -1,5 +1,6 @@
 <script>
 	import { flip } from 'svelte/animate';
+	import { fade } from 'svelte/transition';
 	import { Howl, Howler } from 'howler';
 	const buttsound = new Howl({
 		src: ['/src/lib/ButtonSound.mp3'],
@@ -19,9 +20,9 @@
 </script>
 
 <main>
-	<section id="buttons">
+	<section id="buttons" in:fade>
 		{#if instructions}
-			<div class="instructs-wrapper">
+			<div class="instructs-wrapper" transition:fade>
 				<div class="instructs">
 					Choose from the following options for different experiences.<br />
 					Note: To bring up navigation at any point in time press ESC
