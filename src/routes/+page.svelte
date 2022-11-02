@@ -1,5 +1,21 @@
 <script>
+	import { flip } from 'svelte/animate';
+	import { Howl, Howler } from 'howler';
+	const buttsound = new Howl({
+		src: ['/src/lib/ButtonSound.mp3'],
+		volume: 0.1
+	});
 	let instructions = true;
+	let buttons = [{ txt: 'Normal UI' }, { txt: 'Game UI' }, { txt: 'Creative UI' }];
+	const play = (sound) => {
+		sound.play();
+		// Clear listener after first call.
+
+		// Fires when the sound finishes playing.
+		sound.on('end', function () {
+			console.log('Finished!');
+		});
+	};
 </script>
 
 <main>
@@ -18,9 +34,19 @@
 				>
 			</div>
 		{/if}
-		<button class="butt"> Normal UI </button>
-		<button class="butt"> Game UI </button>
-		<button class="butt"> Creative UI </button>
+		{#each buttons as { txt }}
+			<button
+				class="butt"
+				on:focus={() => {
+					buttsound.play();
+				}}
+				on:mouseover={() => {
+					buttsound.play();
+				}}
+			>
+				{txt}</button
+			>
+		{/each}
 	</section>
 </main>
 
@@ -57,12 +83,11 @@
 		padding: 1rem;
 		border-radius: 0.8rem;
 		background: transparent;
-		color: var(--light);
+		color: pink;
 		border: 3px solid var(--light);
 		margin: 0.5rem;
 		font-size: 2rem;
 		cursor: pointer;
-		transform: 1s;
 	}
 	#close-instructs {
 		position: relative;
