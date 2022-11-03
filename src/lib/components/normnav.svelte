@@ -24,7 +24,9 @@
 				/></svg
 			>
 		</button>
-		<h1 id="header">Elias De Windt</h1>
+		<a id="headlink" href="/normal-ui">
+			<h1 id="header">Elias De Windt</h1>
+		</a>
 		<div class="links">
 			{#each nav as { url, name }}
 				<li><a href={url}>{name}</a></li>
@@ -42,12 +44,15 @@
 </nav>
 
 <style>
-	#header {
+	#headlink {
 		display: flex;
-		align-items: center;
-		color: var(--light);
 		justify-content: center;
+		align-items: center;
 		flex: 0.6;
+		width: 100%;
+	}
+	#header {
+		color: var(--light);
 		padding-left: 2rem;
 	}
 	.nav {
@@ -91,14 +96,13 @@
 		color: var(--light);
 		font-size: 1.25rem;
 	}
-	@media only screen and (max-width: 600px) {
+	@media only screen and (max-width: 1100px) {
 		.links {
 			display: none;
 		}
 		#header {
-			display: flex;
-			align-items: center;
-			color: var(--light);
+			padding-left: 0;
+			font-size: 2rem;
 		}
 		.nav {
 			display: block;
