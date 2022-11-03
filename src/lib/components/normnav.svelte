@@ -94,6 +94,7 @@
 		justify-content: center;
 		position: fixed;
 		background-color: black;
+		z-index: 3;
 	}
 	ul {
 		display: flex;
