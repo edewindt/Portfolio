@@ -1,4 +1,5 @@
 <script>
+	import { slide } from 'svelte/transition';
 	let pr = '/normal-ui';
 	let nav = [
 		{ url: pr, name: 'Home' },
@@ -9,7 +10,7 @@
 	];
 	let navclicked = false;
 	const navclick = () => {
-		console.log('navcliked');
+		navclicked = !navclicked;
 	};
 </script>
 
@@ -45,6 +46,16 @@
 		</button>
 	</ul>
 </nav>
+{#if navclicked}
+	<nav class="side" transition:slide>
+		<ul class="show">
+			<li><button on:click={navclick}>Close</button></li>
+			{#each nav as { url, name }}
+				<li><a href={url}>{name}</a></li>
+			{/each}
+		</ul>
+	</nav>
+{/if}
 
 <style>
 	#headlink {
@@ -81,6 +92,7 @@
 		width: 100%;
 		display: flex;
 		justify-content: center;
+		position: fixed;
 		background-color: black;
 	}
 	ul {
@@ -120,5 +132,19 @@
 		#header {
 			font-size: calc(1 * 5vw);
 		}
+	}
+	.side {
+		width: 15rem;
+		height: 100vh;
+		background-color: var(--dark);
+	}
+	.show {
+		display: flex;
+		padding: 0;
+		margin: 0;
+		width: 100%;
+		flex-direction: column;
+		align-items: center;
+		justify-content: center;
 	}
 </style>
