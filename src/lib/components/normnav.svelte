@@ -24,12 +24,13 @@
 				/></svg
 			>
 		</button>
+		<h1 id="header">Elias De Windt</h1>
 		<div class="links">
 			{#each nav as { url, name }}
 				<li><a href={url}>{name}</a></li>
 			{/each}
 		</div>
-		<h1 id="header">Elias De Windt</h1>
+
 		<button class="darkmode">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
 				><path
@@ -42,7 +43,9 @@
 
 <style>
 	#header {
-		display: none;
+		display: flex;
+		align-items: center;
+		color: var(--light);
 	}
 	.nav {
 		background: transparent;
