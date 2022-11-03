@@ -46,10 +46,14 @@
 		display: flex;
 		align-items: center;
 		color: var(--light);
+		justify-content: center;
+		flex: 0.6;
+		padding-left: 2rem;
 	}
 	.nav {
 		background: transparent;
 		border: none;
+		display: none;
 	}
 	.nav svg {
 		fill: var(--light);
@@ -95,6 +99,14 @@
 			display: flex;
 			align-items: center;
 			color: var(--light);
+		}
+		.nav {
+			display: block;
+		}
+		.nav svg {
+			fill: var(--light);
+			padding: 1rem;
+			cursor: pointer;
 		}
 	}
 </style>
