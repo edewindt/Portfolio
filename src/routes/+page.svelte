@@ -17,7 +17,7 @@
 <main>
 	<section id="buttons" in:fade>
 		{#if instructions}
-			<div class="instructs-wrapper" transition:fade>
+			<div class="instructs-wrapper" transition:fade|local>
 				<div class="instructs">
 					Choose from the following options for different experiences.<br />
 					Note: To bring up navigation at any point in time press ESC
