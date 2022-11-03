@@ -9,10 +9,24 @@
 	onMount(() => {
 		navsound.play();
 	});
+	let nav = [
+		{ name: 'Home', url: '' },
+		{ name: 'Projects', url: '' },
+		{ name: 'Bio', url: '' },
+		{ name: 'CV/Resume', url: '' },
+		{ name: 'Contact', url: '' }
+	];
 </script>
 
-<nav transition:fly={{ delay: 250, duration: 1000, y: 500, opacity: 0.5 }}>
-	<section class="inner-container">Hello World</section>
+<nav transition:fly={{ delay: 250, duration: 1000, y: 500, opacity: 0 }}>
+	<section class="inner-container">
+		<div class="menu">
+			<ul>
+				{#each nav as { name, url }}
+					<li>{name}</li>{/each}
+			</ul>
+		</div>
+	</section>
 </nav>
 
 <style>
