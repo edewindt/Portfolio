@@ -110,6 +110,10 @@
 	a {
 		color: var(--light);
 		font-size: 1.25rem;
+		transition: 0.4s;
+	}
+	a:hover {
+		opacity: 0.6;
 	}
 	@media only screen and (max-width: 1100px) {
 		.links {
