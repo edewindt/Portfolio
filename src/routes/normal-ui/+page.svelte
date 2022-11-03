@@ -1,4 +1,5 @@
 <script>
+	import Type from '../../lib/components/type.svelte';
 	import hero from '$lib/assets/lavacomp.png';
 </script>
 
@@ -6,7 +7,7 @@
 	class="hero"
 	style="  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({hero});"
 >
-	<h2 class="hero-text">I'm Elias a</h2>
+	<h2 class="hero-text">My name is Elias and <Type /></h2>
 </section>
 
 <style>
