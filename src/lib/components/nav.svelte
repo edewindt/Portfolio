@@ -11,11 +11,11 @@
 	});
 	let nav = [
 		{ name: 'Home', url: '/' },
-		{ name: 'Projects', url: '/Normal-UI/projects' },
+		{ name: 'Projects', url: '/normal-ui/projects' },
 		{ name: 'Bio', url: '/' },
 		{ name: 'CV/Resume', url: '/Resume' },
-		{ name: 'Contact', url: '/Normal-UI/contact' },
-		{ name: 'Design', url: '/Normal-UI/design' }
+		{ name: 'Contact', url: '/normal-ui/contact' },
+		{ name: 'Design', url: '/normal-ui/design' }
 	];
 </script>
 
