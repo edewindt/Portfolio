@@ -13,7 +13,7 @@
 		{ name: 'Home', url: '/' },
 		{ name: 'Projects', url: '/normal-ui/projects' },
 		{ name: 'Bio', url: '/' },
-		{ name: 'CV/Resume', url: '/Resume' },
+		{ name: 'CV/Resume', url: '/resume' },
 		{ name: 'Contact', url: '/normal-ui/contact' },
 		{ name: 'Design', url: '/normal-ui/design' }
 	];
