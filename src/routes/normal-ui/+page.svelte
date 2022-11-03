@@ -28,15 +28,15 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		display: grid;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
 	}
 	.hero-text {
-		text-align: center;
-		position: absolute;
-		top: 50%;
-		left: 50%;
-		transform: translate(-50%, -50%);
 		color: white;
 		font-size: 4rem;
+		text-align: center;
 	}
 	#buttons {
 		height: 100%;
