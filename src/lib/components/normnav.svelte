@@ -8,11 +8,14 @@
 		{ url: pr + '/resume', name: 'Resume' }
 	];
 	let navclicked = false;
+	const navclick = () => {
+		console.log('navcliked');
+	};
 </script>
 
 <nav>
 	<ul>
-		<button class="nav">
+		<button class="nav" on:click={navclick}>
 			<svg
 				width="24"
 				height="24"
