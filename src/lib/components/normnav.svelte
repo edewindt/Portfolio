@@ -113,4 +113,9 @@
 			cursor: pointer;
 		}
 	}
+	@media only screen and (max-width: 575px) {
+		#header {
+			font-size: calc(1 * 5vw);
+		}
+	}
 </style>
