@@ -47,6 +47,7 @@
 	.nav svg {
 		fill: var(--light);
 		padding: 1rem;
+		cursor: pointer;
 	}
 	.darkmode {
 		background: transparent;
@@ -55,6 +56,7 @@
 	.darkmode svg {
 		fill: var(--light);
 		padding: 1rem;
+		cursor: pointer;
 	}
 	nav {
 		width: 100%;
@@ -77,5 +79,10 @@
 	a {
 		color: var(--light);
 		font-size: 1.25rem;
+	}
+	@media only screen and (max-width: 600px) {
+		.links {
+			display: none;
+		}
 	}
 </style>
