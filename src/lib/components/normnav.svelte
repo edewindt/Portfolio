@@ -29,6 +29,7 @@
 				<li><a href={url}>{name}</a></li>
 			{/each}
 		</div>
+		<h1 id="header">Elias De Windt</h1>
 		<button class="darkmode">
 			<svg xmlns="http://www.w3.org/2000/svg" width="24" height="24" viewBox="0 0 24 24"
 				><path
@@ -40,6 +41,9 @@
 </nav>
 
 <style>
+	#header {
+		display: none;
+	}
 	.nav {
 		background: transparent;
 		border: none;
@@ -83,6 +87,11 @@
 	@media only screen and (max-width: 600px) {
 		.links {
 			display: none;
+		}
+		#header {
+			display: flex;
+			align-items: center;
+			color: var(--light);
 		}
 	}
 </style>
