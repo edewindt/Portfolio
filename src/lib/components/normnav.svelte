@@ -2,7 +2,6 @@
 	import { slide } from 'svelte/transition';
 	let pr = '/normal-ui';
 	let nav = [
-		{ url: pr, name: 'Home' },
 		{ url: pr + '/contact', name: 'Contact' },
 		{ url: pr + '/design', name: 'Design' },
 		{ url: pr + '/projects', name: 'Projects' },

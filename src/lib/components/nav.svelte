@@ -36,7 +36,7 @@
 		background-color: rgba(0, 0, 0, 0.775);
 		height: 100vh;
 		width: 100vw;
-		position: absolute;
+		position: fixed;
 		z-index: 10;
 		color: var(--light);
 		display: flex;
