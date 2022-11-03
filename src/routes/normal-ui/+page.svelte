@@ -52,17 +52,7 @@
 		margin: 0.5rem;
 		font-size: 2rem;
 		cursor: pointer;
-	}
-	.butt:hover.butt::before {
-		content: '';
-		position: absolute;
-		background-color: var(--light);
-		top: 120%;
-		width: 100%;
-		height: 100%;
-		transform: perspective(1em) rotateX(30deg) scale(1, 0.5);
-		filter: blur(1em);
-		pointer-events: none;
+		transition: 0.6s;
 	}
 	.butt:hover {
 		--light: red;
@@ -73,7 +63,7 @@
 		padding: 0.3em;
 		border-radius: 15%;
 		text-shadow: 0 0 0.25em var(--light);
-		box-shadow: inset 0 0 0.3em var(--light), 0 0 0.3em var(--light);
+		box-shadow: inset 0 0 0.9em var(--light), 0 0 0.7em var(--light);
 		position: relative;
 		cursor: pointer;
 	}
