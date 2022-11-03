@@ -19,6 +19,7 @@
 	];
 </script>
 
+<!-- svelte-ignore a11y-click-events-have-key-events -->
 <nav in:fly={{ delay: 250, duration: 1000, y: 500, opacity: 0 }} on:click>
 	<section class="inner-container">
 		<div class="menu">

@@ -49,9 +49,10 @@
 {#if navclicked}
 	<nav class="side" transition:slide>
 		<ul class="show">
-			<li><button on:click={navclick}>Close</button></li>
+			<li class="nav-item"><button class="close" on:click={navclick}>Close</button></li>
 			{#each nav as { url, name }}
-				<li><a href={url}>{name}</a></li>
+				<!-- svelte-ignore a11y-click-events-have-key-events -->
+				<li class="nav-item" on:click={navclick}><a href={url}>{name}</a></li>
 			{/each}
 		</ul>
 	</nav>
@@ -145,6 +146,23 @@
 		width: 100%;
 		flex-direction: column;
 		align-items: center;
-		justify-content: center;
+		justify-content: start;
+	}
+	.nav-item {
+		height: 3.5rem;
+		display: flex;
+		align-items: center;
+		transition: 0.4s;
+	}
+	.close {
+		background: transparent;
+		color: var(--light);
+		font-family: 'Courier New', Courier, monospace;
+		border: none;
+		font-size: 1.25rem;
+		cursor: pointer;
+	}
+	.nav-item:hover {
+		opacity: 0.6;
 	}
 </style>
