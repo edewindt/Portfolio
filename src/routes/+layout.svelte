@@ -9,11 +9,14 @@
 			nav = !nav;
 		}
 	}
+	const ToggleNav = () => {
+		nav = !nav;
+	};
 </script>
 
 <svelte:window on:keydown|preventDefault={onKeyDown} />
 {#if nav}
-	<Nav />
+	<Nav on:click={ToggleNav} />
 {/if}
 <body style="--light:{light};--dark:{dark};">
 	<slot />

@@ -19,7 +19,7 @@
 	];
 </script>
 
-<nav transition:fly={{ delay: 250, duration: 1000, y: 500, opacity: 0 }}>
+<nav in:fly={{ delay: 250, duration: 1000, y: 500, opacity: 0 }} on:click>
 	<section class="inner-container">
 		<div class="menu">
 			<ul>
@@ -41,7 +41,7 @@
 		display: flex;
 		justify-content: center;
 		align-items: center;
-		backdrop-filter: blur(5px);
+		backdrop-filter: blur(3px);
 	}
 	a {
 		font-size: 1.75rem;
