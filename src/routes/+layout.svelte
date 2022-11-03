@@ -8,12 +8,11 @@
 		if (e.keyCode === 27) {
 			nav = !nav;
 		}
-		console.log(e.keyCode);
 	}
 </script>
 
 <svelte:window on:keydown|preventDefault={onKeyDown} />
-{#if !nav}
+{#if nav}
 	<Nav />
 {/if}
 <body style="--light:{light};--dark:{dark};">

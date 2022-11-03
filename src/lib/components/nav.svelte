@@ -10,11 +10,12 @@
 		navsound.play();
 	});
 	let nav = [
-		{ name: 'Home', url: '' },
-		{ name: 'Projects', url: '' },
-		{ name: 'Bio', url: '' },
-		{ name: 'CV/Resume', url: '' },
-		{ name: 'Contact', url: '' }
+		{ name: 'Home', url: '/' },
+		{ name: 'Projects', url: '/Normal-UI/projects' },
+		{ name: 'Bio', url: '/' },
+		{ name: 'CV/Resume', url: '/Resume' },
+		{ name: 'Contact', url: '/Normal-UI/contact' },
+		{ name: 'Design', url: '/Normal-UI/design' }
 	];
 </script>
 
@@ -23,7 +24,7 @@
 		<div class="menu">
 			<ul>
 				{#each nav as { name, url }}
-					<li>{name}</li>{/each}
+					<li><a href={url}>{name}</a></li>{/each}
 			</ul>
 		</div>
 	</section>
@@ -41,5 +42,13 @@
 		justify-content: center;
 		align-items: center;
 		backdrop-filter: blur(5px);
+	}
+	a {
+		font-size: 1.75rem;
+		color: var(--light);
+		transition: 0.4s;
+	}
+	a:hover {
+		opacity: 0.4;
 	}
 </style>
