@@ -3,20 +3,11 @@
 	import { fade } from 'svelte/transition';
 	import { Howl, Howler } from 'howler';
 	const buttsound = new Howl({
-		src: ['/src/lib/ButtonSound.mp3'],
+		src: ['/src/lib//assets/ButtonSound.mp3'],
 		volume: 0.1
 	});
 	let instructions = true;
 	let buttons = [{ txt: 'Normal UI' }, { txt: 'Game UI' }, { txt: 'Creative UI' }];
-	const play = (sound) => {
-		sound.play();
-		// Clear listener after first call.
-
-		// Fires when the sound finishes playing.
-		sound.on('end', function () {
-			console.log('Finished!');
-		});
-	};
 </script>
 
 <main>
