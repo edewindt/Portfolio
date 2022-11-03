@@ -6,7 +6,7 @@
 	class="hero"
 	style="  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({hero});"
 >
-	<h2 class="hero-text">My name is Elias</h2>
+	<h2 class="hero-text">I'm Elias a</h2>
 </section>
 
 <style>
@@ -23,6 +23,6 @@
 		left: 50%;
 		transform: translate(-50%, -50%);
 		color: white;
-		font-size: 2rem;
+		font-size: 4rem;
 	}
 </style>
