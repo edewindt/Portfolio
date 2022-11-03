@@ -7,7 +7,11 @@
 		volume: 0.1
 	});
 	let instructions = true;
-	let buttons = [{ txt: 'Normal UI' }, { txt: 'Game UI' }, { txt: 'Creative UI' }];
+	let buttons = [
+		{ txt: 'Normal UI', url: 'normal-ui' },
+		{ txt: 'Game UI', url: 'game-ui' },
+		{ txt: 'Creative UI', url: 'creative-ui' }
+	];
 </script>
 
 <main>
@@ -26,18 +30,20 @@
 				>
 			</div>
 		{/if}
-		{#each buttons as { txt }}
-			<button
-				class="butt"
-				on:mouseover={() => {
-					buttsound.play();
-				}}
-				on:focus={() => {
-					buttsound.play();
-				}}
-			>
-				{txt}</button
-			>
+		{#each buttons as { txt, url }}
+			<a href={url}>
+				<button
+					class="butt"
+					on:mouseover={() => {
+						buttsound.play();
+					}}
+					on:focus={() => {
+						buttsound.play();
+					}}
+				>
+					{txt}</button
+				>
+			</a>
 		{/each}
 	</section>
 </main>
