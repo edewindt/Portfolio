@@ -2,11 +2,11 @@
 	import { flip } from 'svelte/animate';
 	import { fade } from 'svelte/transition';
 	import { Howl, Howler } from 'howler';
+	import { instructions } from '$lib/stores/instructs.js';
 	const buttsound = new Howl({
 		src: ['/src/lib//assets/ButtonSound.mp3'],
 		volume: 0.1
 	});
-	let instructions = true;
 	let buttons = [
 		{ txt: 'Normal UI', url: 'normal-ui' },
 		{ txt: 'Game UI', url: 'game-ui' },
@@ -16,7 +16,7 @@
 
 <main>
 	<section id="buttons" in:fade>
-		{#if instructions}
+		{#if $instructions}
 			<div class="instructs-wrapper" transition:fade|local>
 				<div class="instructs">
 					Choose from the following options for different experiences.<br />
@@ -25,7 +25,7 @@
 				<button
 					id="close-instructs"
 					on:click={() => {
-						instructions = false;
+						instructions.set(false);
 					}}>X</button
 				>
 			</div>
