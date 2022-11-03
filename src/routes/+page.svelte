@@ -20,6 +20,8 @@
 			<div class="instructs-wrapper" transition:fade|local>
 				<div class="instructs">
 					Choose from the following options for different experiences.<br />
+					Mobile users should ONLY pick the Normal UI<br />
+					This application is keyboard accessible<br />
 					Note: To bring up navigation at any point in time press ESC
 				</div>
 				<button

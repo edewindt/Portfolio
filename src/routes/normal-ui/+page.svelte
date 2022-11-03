@@ -1,11 +1,6 @@
 <script>
 	import Type from '../../lib/components/type.svelte';
 	import hero from '$lib/assets/lavacomp.png';
-	import { Howl, Howler } from 'howler';
-	const buttsound = new Howl({
-		src: ['/src/lib//assets/Electric.wav'],
-		volume: 0.01
-	});
 	let buttons = [
 		{ name: 'Projects', url: '/normal-ui/projects' },
 		{ name: 'Resume', url: '/normal-ui/resume' },
@@ -21,17 +16,7 @@
 	<h2 class="hero-text">My name is Elias and <Type /></h2>
 	<div id="buttons">
 		{#each buttons as { name, url }}
-			<a href={url}
-				><button
-					class="butt"
-					on:focus={() => {
-						buttsound.play();
-					}}
-					on:mouseover={() => {
-						buttsound.play();
-					}}>{name}</button
-				></a
-			>
+			<a href={url}><button class="butt">{name}</button></a>
 		{/each}
 	</div>
 </section>
