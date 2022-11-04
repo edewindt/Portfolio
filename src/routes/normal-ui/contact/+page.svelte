@@ -19,14 +19,11 @@
 		</p>
 
 		<form action="">
-			<label for="">Name</label><input type="text" /><label for="">Email</label><input
-				type="text"
-			/><label for="">Phone</label><input type="text" /><label for="">Message</label><textarea
-				name=""
-				id=""
-				cols="30"
-				rows="10"
-			/>
+			<label for="">Name (Required)</label><input type="text" /><label for=""
+				>Email (Required)</label
+			><input type="text" /><label for="">Phone</label><input type="text" /><label for=""
+				>Message</label
+			><textarea name="" id="" cols="30" rows="10" />
 		</form>
 	</div>
 </section>
@@ -51,6 +48,14 @@
 		flex-direction: column;
 	}
 	input {
-		width: 100%;
+		width: 40rem;
+		max-width: calc(100vw - 3rem);
+	}
+	textarea {
+		width: 40rem;
+		max-width: calc(100vw - 3rem);
+	}
+	.contact p {
+		margin: 1rem;
 	}
 </style>
