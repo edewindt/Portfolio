@@ -27,6 +27,7 @@
 			<div class="instructs-wrapper" transition:fade|local>
 				<div class="instructs">
 					{@html instruction}
+					<button class="next">Next</button>
 				</div>
 				<button
 					id="close-instructs"
@@ -55,6 +56,19 @@
 </main>
 
 <style>
+	.next {
+		background-color: transparent;
+		border: 2px solid var(--light);
+		border-radius: 0.5rem;
+		color: var(--light);
+		font-size: 1.5rem;
+		padding: 0 1rem;
+		margin-top: 1rem;
+		cursor: pointer;
+	}
+	.next:hover {
+		box-shadow: inset 0 0 0.3em var(--light), 0 0 0.3em var(--light);
+	}
 	.instructs-wrapper {
 		display: flex;
 		justify-content: center;
