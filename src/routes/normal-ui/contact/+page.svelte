@@ -8,7 +8,11 @@
 			<li><a href="https://www.linkedin.com/in/eliasdewindt/">LinkedIn</a></li>
 			<li><a href="https://edewindt.com/contact-me/">My Blog (edewindt.com)</a></li>
 		</ul>
-		<p>For general questions and contact, feel free to email me at elias@edewindt.com</p>
+		<p>
+			For general questions and contact, feel free to email me at <span class="email"
+				>elias@edewindt.com</span
+			>
+		</p>
 		<p>
 			If you want to work with me on a project, or idea, I would gladly consider working with you.
 			To see the full range of skills I posses, visit my Resume page.
@@ -41,6 +45,9 @@
 		width: 40rem;
 		max-width: 100%;
 		flex-direction: column;
+		background-color: var(--dark);
+		padding: 1rem;
+		color: var(--light);
 	}
 	.contact form {
 		display: flex;
@@ -49,13 +56,19 @@
 	}
 	input {
 		width: 40rem;
-		max-width: calc(100vw - 3rem);
+		max-width: calc(100vw - 5rem);
 	}
 	textarea {
 		width: 40rem;
-		max-width: calc(100vw - 3rem);
+		max-width: calc(100vw - 5rem);
 	}
 	.contact p {
 		margin: 1rem;
+	}
+	a {
+		color: pink;
+	}
+	.email {
+		color: pink;
 	}
 </style>
