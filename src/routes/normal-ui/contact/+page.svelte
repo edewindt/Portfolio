@@ -7,7 +7,7 @@
 		<li><a href="https://www.linkedin.com/in/eliasdewindt/">LinkedIn</a></li>
 		<li><a href="https://edewindt.com/contact-me/">My Blog (edewindt.com)</a></li>
 	</ul>
-	<p>For general question and contact, feel free to email me at elias@edewindt.com</p>
+	<p>For general questions and contact, feel free to email me at elias@edewindt.com</p>
 	<p>
 		If you want to work with me on a project, or idea, I would gladly consider working with you. To
 		see the full range of skills I posses, visit my Resume page.
@@ -17,5 +17,14 @@
 		less!
 	</p>
 
-	<form action="" />
+	<form action="">
+		<label for="">Name</label><input type="text" /><label for="">Email</label><input
+			type="text"
+		/><label for="">Phone</label><input type="text" /><label for="">Message</label><textarea
+			name=""
+			id=""
+			cols="30"
+			rows="10"
+		/>
+	</form>
 </section>
