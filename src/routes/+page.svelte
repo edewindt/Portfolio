@@ -12,6 +12,13 @@
 		{ txt: 'Game UI', url: 'game-ui' },
 		{ txt: 'Creative UI', url: 'creative-ui' }
 	];
+	let instructs = [
+		`Choose from the following options for different experiences.<br />
+					Mobile users should ONLY pick the Normal UI<br />
+					This application is keyboard accessible<br />
+					Note: To bring up navigation at any point in time press ESC`
+	];
+	let instruction = instructs[0];
 </script>
 
 <main>
@@ -19,10 +26,7 @@
 		{#if $instructions}
 			<div class="instructs-wrapper" transition:fade|local>
 				<div class="instructs">
-					Choose from the following options for different experiences.<br />
-					Mobile users should ONLY pick the Normal UI<br />
-					This application is keyboard accessible<br />
-					Note: To bring up navigation at any point in time press ESC
+					{@html instruction}
 				</div>
 				<button
 					id="close-instructs"
