@@ -14,9 +14,9 @@
 	];
 	let instructs = [
 		`Choose from the following options for different experiences.<br />
-					Mobile users should ONLY pick the Normal UI<br />
-					This application is keyboard accessible<br />
-					Note: To bring up navigation at any point in time press ESC`
+					Mobile users should pick the Normal UI for the best experience.<br />`,
+		`					This application is keyboard accessible<br />
+					Note: To bring up navigation at any point in time press ESC or double click`
 	];
 	let instruction = instructs[0];
 </script>
