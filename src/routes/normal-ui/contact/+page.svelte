@@ -32,14 +32,25 @@
 </section>
 
 <style>
+	section {
+		display: flex;
+		align-items: center;
+		flex-direction: column;
+		margin: 2rem;
+	}
 	.contact {
 		display: flex;
 		align-items: center;
+		width: 40rem;
+		max-width: 100%;
 		flex-direction: column;
 	}
 	.contact form {
 		display: flex;
 		align-items: center;
 		flex-direction: column;
+	}
+	input {
+		width: 100%;
 	}
 </style>
