@@ -3,6 +3,10 @@
 	import { fade } from 'svelte/transition';
 	import { Howl, Howler } from 'howler';
 	import { instructions } from '$lib/stores/instructs.js';
+	const clicksound = new Howl({
+		src: ['/src/lib//assets/click.wav'],
+		volume: 0.1
+	});
 	const buttsound = new Howl({
 		src: ['/src/lib//assets/ButtonSound.mp3'],
 		volume: 0.1
@@ -16,9 +20,18 @@
 		`Choose from the following options for different experiences.<br />
 					Mobile users should pick the Normal UI for the best experience.<br />`,
 		`					This application is keyboard accessible<br />
-					Note: To bring up navigation at any point in time press ESC or double click`
+					Note: To bring up navigation at any point in time <br/> press ESC or double click/tap<br />`
 	];
-	let instruction = instructs[0];
+	let i = 0;
+	let end = false;
+	let instruction = instructs[i];
+	const swapinstructs = () => {
+		i++;
+		instruction = instructs[i];
+		if (i + 2 > instructs.length) {
+			end = true;
+		}
+	};
 </script>
 
 <main>
@@ -27,7 +40,18 @@
 			<div class="instructs-wrapper" transition:fade|local>
 				<div class="instructs">
 					{@html instruction}
-					<button class="next">Next</button>
+					{#if !end}<button
+							on:click={() => {
+								clicksound.play();
+								swapinstructs();
+							}}
+							class="next">Next</button
+						>{:else}<button
+							on:click={() => {
+								instructions.set(false);
+							}}
+							class="next">Close</button
+						>{/if}
 				</div>
 				<button
 					id="close-instructs"
