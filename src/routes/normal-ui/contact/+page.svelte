@@ -1,4 +1,11 @@
-<div class="cont">
+<script>
+	import water from '$lib/assets/watercomp.png';
+</script>
+
+<div
+	class="cont"
+	style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({water});"
+>
 	<section>
 		<h1>Contact</h1>
 
@@ -35,9 +42,14 @@
 </div>
 
 <style>
+	h1 {
+		color: white;
+	}
 	.cont {
-		background-color: bisque;
 		height: calc(100vh - 3.5rem);
+		background-size: cover;
+		background-position: center;
+		background-repeat: no-repeat;
 	}
 	section {
 		display: flex;
