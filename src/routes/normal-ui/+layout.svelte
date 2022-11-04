@@ -5,4 +5,12 @@
 <header>
 	<Normnav />
 </header>
-<slot />
+<main>
+	<slot />
+</main>
+
+<style>
+	main {
+		padding-top: 3.5rem;
+	}
+</style>
