@@ -54,9 +54,9 @@
 		transition: 0.3s;
 		cursor: pointer;
 	}
-	/* span:hover {
+	span:hover {
 		color: rgb(215, 215, 215);
-	} */
+	}
 	p {
 		text-align: center;
 	}
