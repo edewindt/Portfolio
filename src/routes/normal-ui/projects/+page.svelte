@@ -1,6 +1,7 @@
 <script>
 	import reactlogo from '$lib/assets/react.png';
 	import nodelogo from '$lib/assets/node.png';
+	import gamelogo from '$lib/assets/game.png';
 	import ProCard from '../../../lib/components/proCard.svelte';
 	const categories = [
 		{
@@ -12,7 +13,7 @@
 		{
 			name: 'Games',
 			description: 'For experimentation, and fun, but building games also teaches me a lot',
-			img: ''
+			img: gamelogo
 		},
 		{
 			name: 'Back-end',
