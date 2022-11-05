@@ -9,3 +9,9 @@
 	<img src={img} alt="" />
 	<p>{description}</p>
 </div>
+
+<style>
+	img {
+		height: 10rem;
+	}
+</style>
