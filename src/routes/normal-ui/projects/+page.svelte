@@ -9,18 +9,21 @@
 			name: 'Front-end',
 			description:
 				'The HTML, CSS, and JavaScript, Everything that makes up the UI, including Libraies and Frameworks',
-			img: reactlogo
+			img: reactlogo,
+			url: '/normal-ui/projects/front-end'
 		},
 		{
 			name: 'Games',
 			description: 'For experimentation, and fun, but building games also teaches me a lot',
-			img: gamelogo
+			img: gamelogo,
+			url: '/normal-ui/projects/games'
 		},
 		{
 			name: 'Back-end',
 			description:
 				'The stuff that no one sees or appreciates that makes an application truly complex',
-			img: nodelogo
+			img: nodelogo,
+			url: '/normal-ui/projects/back-end'
 		}
 	];
 </script>
@@ -32,8 +35,8 @@
 	<section>
 		<h2>Projects</h2>
 		<div class="categories">
-			{#each categories as { name, description, img }}
-				<ProCard {name} {description} {img} />
+			{#each categories as { name, description, img, url }}
+				<ProCard {name} {description} {img} {url} />
 			{/each}
 		</div>
 	</section>

@@ -2,13 +2,16 @@
 	export let name;
 	export let img;
 	export let description;
+	export let url;
 </script>
 
-<div class="card">
-	<h3>{name}</h3>
-	<img src={img} alt="" />
-	<p>{description}</p>
-</div>
+<a href={url}>
+	<div class="card">
+		<h3>{name}</h3>
+		<img src={img} alt="" />
+		<p>{description}</p>
+	</div>
+</a>
 
 <style>
 	img {
@@ -26,6 +29,9 @@
 		object-fit: scale-down;
 		padding: 2rem;
 		border-radius: 2rem;
+	}
+	.card:hover {
+		box-shadow: inset 0 0 0.5rem var(--light), 0 0 0.5rem var(--light);
 	}
 	.card p {
 		font-size: 1.25rem;
