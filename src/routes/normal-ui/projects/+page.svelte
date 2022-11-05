@@ -32,3 +32,17 @@
 		{/each}
 	</div>
 </section>
+
+<style>
+	section {
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+	}
+	.categories {
+		display: grid;
+		grid-template-columns: repeat(3, 1fr);
+		gap: 1rem;
+	}
+</style>

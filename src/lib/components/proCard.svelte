@@ -5,7 +5,7 @@
 </script>
 
 <div class="card">
-	<h1>{name}</h1>
+	<h2>{name}</h2>
 	<img src={img} alt="" />
 	<p>{description}</p>
 </div>
@@ -14,6 +14,7 @@
 	img {
 		height: 15rem;
 		width: 17rem;
+		padding: 2rem;
 	}
 	.card {
 		background-color: var(--dark);
@@ -24,5 +25,14 @@
 		align-items: center;
 		flex-direction: column;
 		object-fit: scale-down;
+		padding: 2rem;
+		border-radius: 2rem;
+	}
+	.card p {
+		font-size: 1.25rem;
+		text-align: center;
+	}
+	.card h2 {
+		font-size: 2.5rem;
 	}
 </style>
