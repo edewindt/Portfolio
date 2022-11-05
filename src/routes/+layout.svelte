@@ -14,7 +14,7 @@
 	};
 </script>
 
-<svelte:window on:dblclick={ToggleNav} on:keydown|preventDefault={onKeyDown} />
+<svelte:window on:dblclick={ToggleNav} on:keydown={onKeyDown} />
 {#if nav}
 	<Nav on:click={ToggleNav} />
 {/if}

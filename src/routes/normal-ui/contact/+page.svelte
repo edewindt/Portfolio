@@ -88,6 +88,7 @@
 		background-color: pink;
 		border: none;
 		border-radius: 3px;
+		padding-left: 0.5rem;
 	}
 	label {
 		margin-top: 1.7rem;
@@ -102,6 +103,7 @@
 		background-color: pink;
 		border: none;
 		border-radius: 3px;
+		padding-left: 0.5rem;
 	}
 	.contact p {
 		margin: 1rem;
