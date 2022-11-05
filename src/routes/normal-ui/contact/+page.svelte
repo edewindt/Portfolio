@@ -74,6 +74,7 @@
 		color: var(--light);
 		padding-bottom: 3.5rem;
 		font-size: 20px;
+		border-radius: 1rem;
 	}
 	.contact form {
 		display: flex;
@@ -86,9 +87,11 @@
 		max-width: calc(100vw - 5rem);
 		background-color: pink;
 		border: none;
+		border-radius: 3px;
 	}
 	label {
-		margin-top: 2rem;
+		margin-top: 1.7rem;
+		margin-bottom: 0.3rem;
 		display: flex;
 		justify-content: start;
 		width: 100%;
@@ -98,6 +101,7 @@
 		max-width: calc(100vw - 5rem);
 		background-color: pink;
 		border: none;
+		border-radius: 3px;
 	}
 	.contact p {
 		margin: 1rem;
@@ -111,5 +115,42 @@
 	ul {
 		position: relative;
 		left: 5rem;
+	}
+	@media only screen and (max-width: 1300px) {
+		.contact {
+			max-width: calc(100vw - 15rem);
+		}
+		input {
+			width: 20rem;
+		}
+		textarea {
+			width: 20rem;
+		}
+	}
+	@media only screen and (max-width: 900px) {
+		.contact {
+			display: flex;
+			align-items: center;
+			width: 40rem;
+			max-width: 100%;
+			flex-direction: column;
+			background-color: var(--dark);
+			padding: 1rem;
+			color: var(--light);
+		}
+
+		.contact form {
+			display: flex;
+			align-items: center;
+			flex-direction: column;
+		}
+		input {
+			width: 40rem;
+			max-width: calc(100vw - 5rem);
+		}
+		textarea {
+			width: 40rem;
+			max-width: calc(100vw - 5rem);
+		}
 	}
 </style>
