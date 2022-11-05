@@ -20,7 +20,7 @@
 		padding: 2rem;
 	}
 	.card {
-		background-color: var(--dark);
+		background-color: rgba(0, 0, 0, 0.676);
 		color: var(--light);
 		display: flex;
 		justify-content: center;
@@ -31,7 +31,8 @@
 		border-radius: 2rem;
 	}
 	.card:hover {
-		box-shadow: inset 0 0 0.5rem var(--light), 0 0 0.5rem var(--light);
+		box-shadow: 0 0 0.5rem var(--light);
+		background-color: var(--dark);
 	}
 	.card p {
 		font-size: 1.25rem;
