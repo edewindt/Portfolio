@@ -89,6 +89,7 @@
 		border: none;
 		border-radius: 3px;
 		padding-left: 0.5rem;
+		font-size: 1.25rem;
 	}
 	label {
 		margin-top: 1.7rem;
@@ -104,6 +105,7 @@
 		border: none;
 		border-radius: 3px;
 		padding-left: 0.5rem;
+		font-size: 1.25rem;
 	}
 	.contact p {
 		margin: 1rem;
