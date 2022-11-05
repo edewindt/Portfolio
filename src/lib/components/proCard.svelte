@@ -12,6 +12,17 @@
 
 <style>
 	img {
-		height: 10rem;
+		height: 15rem;
+		width: 17rem;
+	}
+	.card {
+		background-color: var(--dark);
+		color: var(--light);
+		width: 26rem;
+		display: flex;
+		justify-content: center;
+		align-items: center;
+		flex-direction: column;
+		object-fit: scale-down;
 	}
 </style>
