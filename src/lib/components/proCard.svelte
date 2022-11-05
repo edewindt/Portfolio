@@ -5,7 +5,7 @@
 </script>
 
 <div class="card">
-	<h2>{name}</h2>
+	<h3>{name}</h3>
 	<img src={img} alt="" />
 	<p>{description}</p>
 </div>
@@ -32,7 +32,7 @@
 		font-size: 1.25rem;
 		text-align: center;
 	}
-	.card h2 {
+	.card h3 {
 		font-size: 2.5rem;
 	}
 </style>

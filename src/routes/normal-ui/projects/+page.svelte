@@ -25,7 +25,7 @@
 </script>
 
 <section>
-	<h1>Projects</h1>
+	<h2>Projects</h2>
 	<div class="categories">
 		{#each categories as { name, description, img }}
 			<ProCard {name} {description} {img} />
@@ -34,11 +34,15 @@
 </section>
 
 <style>
+	h2 {
+		font-size: 3rem;
+	}
 	section {
 		display: flex;
 		justify-content: center;
 		align-items: center;
 		flex-direction: column;
+		padding-top: 4.5rem;
 	}
 	.categories {
 		display: grid;
