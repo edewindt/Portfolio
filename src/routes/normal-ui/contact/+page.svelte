@@ -69,7 +69,7 @@
 		align-items: center;
 		width: 70rem;
 		max-width: 100%;
-		background-color: var(--dark);
+		background-color: rgba(0, 0, 0, 0.676);
 		padding: 4rem;
 		color: var(--light);
 		padding-bottom: 3.5rem;

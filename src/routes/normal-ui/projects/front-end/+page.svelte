@@ -24,6 +24,20 @@
 				'The stuff that no one sees or appreciates that makes an application truly complex',
 			img: nodelogo,
 			url: '/normal-ui/projects/back-end'
+		},
+		{
+			name: 'Movie App',
+			description:
+				'The stuff that no one sees or appreciates that makes an application truly complex',
+			img: nodelogo,
+			url: '/normal-ui/projects/back-end'
+		},
+		{
+			name: 'My Blog',
+			description:
+				'The stuff that no one sees or appreciates that makes an application truly complex',
+			img: nodelogo,
+			url: '/normal-ui/projects/back-end'
 		}
 	];
 </script>
