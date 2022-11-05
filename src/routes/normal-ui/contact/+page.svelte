@@ -141,6 +141,7 @@
 			background-color: var(--dark);
 			padding: 1rem;
 			color: var(--light);
+			overflow: hidden;
 		}
 
 		.contact form {

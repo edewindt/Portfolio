@@ -17,10 +17,10 @@
 		{ txt: 'Creative UI', url: 'creative-ui' }
 	];
 	let instructs = [
+		`This application is keyboard accessible<br />
+					Note: To bring up navigation at any point in time <br/> press ESC or double click/tap<br />`,
 		`Choose from the following options for different experiences.<br />
-					Mobile users should pick the Normal UI for the best experience.<br />`,
-		`					This application is keyboard accessible<br />
-					Note: To bring up navigation at any point in time <br/> press ESC or double click/tap<br />`
+					Mobile users should pick the Normal UI for the best experience.<br />`
 	];
 	let i = 0;
 	let end = false;
