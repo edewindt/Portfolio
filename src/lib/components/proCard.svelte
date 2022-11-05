@@ -19,7 +19,6 @@
 	.card {
 		background-color: var(--dark);
 		color: var(--light);
-		width: 26rem;
 		display: flex;
 		justify-content: center;
 		align-items: center;
