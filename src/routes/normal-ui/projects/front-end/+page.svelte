@@ -23,19 +23,19 @@
 			name: 'Game Of Thrones',
 			description: 'The front-end to my backend project, a site for Game of Thrones data',
 			img: got,
-			url: '/normal-ui/projects/back-end'
+			url: 'https://go-t-edewindt.vercel.app/'
 		},
 		{
 			name: 'Movie App',
-			description: 'A front-end that pulls from themoviedb.com',
+			description: 'A front-end that pulls from themoviedb.org',
 			img: mov,
-			url: '/normal-ui/projects/back-end'
+			url: 'https://fabulous-narwhal-0242f1.netlify.app/'
 		},
 		{
 			name: 'My Blog',
 			description: 'A blog where I talk about whatever I want, 99% programming',
 			img: blog,
-			url: '/normal-ui/projects/back-end'
+			url: 'https://edewindt.com/'
 		}
 	];
 </script>
