@@ -5,39 +5,35 @@
 	import mov from '$lib/assets/moviecomp.png';
 	import blog from '$lib/assets/blogcomp.png';
 	import water from '$lib/assets/water.png';
-	import ProCard from '$lib/components/proCard.svelte';
+	import Projects from '../../../../lib/components/projects.svelte';
 	const categories = [
 		{
 			name: 'My First App',
-			description:
-				'The HTML, CSS, and JavaScript, Everything that makes up the UI, including Libraies and Frameworks',
+			description: 'The first application I ever created',
 			img: firstapp,
-			url: '/normal-ui/projects/front-end'
+			url: 'https://project.edewindt.com'
 		},
 		{
 			name: 'Google Interface Clone',
-			description: 'For experimentation, and fun, but building games also teaches me a lot',
+			description: 'An interface clone of Google',
 			img: goog,
-			url: '/normal-ui/projects/games'
+			url: 'https://luxury-kitten-251e2f.netlify.app/'
 		},
 		{
 			name: 'Game Of Thrones',
-			description:
-				'The stuff that no one sees or appreciates that makes an application truly complex',
+			description: 'The front-end to my backend project, a site for Game of Thrones data',
 			img: got,
 			url: '/normal-ui/projects/back-end'
 		},
 		{
 			name: 'Movie App',
-			description:
-				'The stuff that no one sees or appreciates that makes an application truly complex',
+			description: 'A front-end that pulls from themoviedb.com',
 			img: mov,
 			url: '/normal-ui/projects/back-end'
 		},
 		{
 			name: 'My Blog',
-			description:
-				'The stuff that no one sees or appreciates that makes an application truly complex',
+			description: 'A blog where I talk about whatever I want, 99% programming',
 			img: blog,
 			url: '/normal-ui/projects/back-end'
 		}
@@ -52,7 +48,7 @@
 		<h2>Front-end</h2>
 		<div class="categories">
 			{#each categories as { name, description, img, url }}
-				<ProCard {name} {description} {img} {url} />
+				<Projects {name} {description} {img} {url} />
 			{/each}
 		</div>
 	</section>
