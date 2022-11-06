@@ -1,29 +1,27 @@
 <script>
-	import firstapp from '$lib/assets/firstappcomp.png';
-	import got from '$lib/assets/gotcomp.png';
-	import goog from '$lib/assets/googcomp.png';
-	import mov from '$lib/assets/moviecomp.png';
-	import blog from '$lib/assets/blogcomp.png';
+	import pokemon from '$lib/assets/pokemcomp.png';
+	import snake from '$lib/assets/snakecomp.png';
+	import match from '$lib/assets/pokecomp.png';
 	import water from '$lib/assets/water.png';
 	import Projects from '../../../../lib/components/projects.svelte';
 	const categories = [
 		{
 			name: 'Pokemon',
 			description: 'Pokemon in vanilla JS',
-			img: firstapp,
+			img: pokemon,
 			url: 'https://gleeful-khapse-7c66aa.netlify.app/'
 		},
 		{
 			name: 'Snake',
 			description: 'The classic Snake Game built using my favorite UI framework',
-			img: goog,
-			url: 'https://luxury-kitten-251e2f.netlify.app/'
+			img: snake,
+			url: 'https://snake-svelte-beta.vercel.app/'
 		},
 		{
 			name: 'Card Matching Game',
 			description: 'A simple card matching game built using my favorite UI framework',
-			img: got,
-			url: 'https://go-t-edewindt.vercel.app/'
+			img: match,
+			url: 'https://match-game-coral.vercel.app/'
 		}
 	];
 </script>
