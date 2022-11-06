@@ -1,7 +1,7 @@
 <script>
-	import pokemon from '$lib/assets/pokemcomp.png';
-	import snake from '$lib/assets/snakecomp.png';
-	import match from '$lib/assets/pokecomp.png';
+	import pokemon from '$lib/assets/pokemcomp1.png';
+	import snake from '$lib/assets/snakecomp1.png';
+	import match from '$lib/assets/pokecomp1.png';
 	import water from '$lib/assets/water.png';
 	import Projects from '../../../../lib/components/projects.svelte';
 	const categories = [
