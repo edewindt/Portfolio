@@ -1,7 +1,9 @@
 <script>
-	import reactlogo from '$lib/assets/react.png';
-	import nodelogo from '$lib/assets/node.png';
-	import gamelogo from '$lib/assets/game.png';
+	import firstapp from '$lib/assets/firstappcomp.png';
+	import got from '$lib/assets/gotcomp.png';
+	import goog from '$lib/assets/googcomp.png';
+	import mov from '$lib/assets/moviecomp.png';
+	import blog from '$lib/assets/blogcomp.png';
 	import water from '$lib/assets/water.png';
 	import ProCard from '$lib/components/proCard.svelte';
 	const categories = [
@@ -9,34 +11,34 @@
 			name: 'My First App',
 			description:
 				'The HTML, CSS, and JavaScript, Everything that makes up the UI, including Libraies and Frameworks',
-			img: reactlogo,
+			img: firstapp,
 			url: '/normal-ui/projects/front-end'
 		},
 		{
 			name: 'Google Interface Clone',
 			description: 'For experimentation, and fun, but building games also teaches me a lot',
-			img: gamelogo,
+			img: goog,
 			url: '/normal-ui/projects/games'
 		},
 		{
 			name: 'Game Of Thrones',
 			description:
 				'The stuff that no one sees or appreciates that makes an application truly complex',
-			img: nodelogo,
+			img: got,
 			url: '/normal-ui/projects/back-end'
 		},
 		{
 			name: 'Movie App',
 			description:
 				'The stuff that no one sees or appreciates that makes an application truly complex',
-			img: nodelogo,
+			img: mov,
 			url: '/normal-ui/projects/back-end'
 		},
 		{
 			name: 'My Blog',
 			description:
 				'The stuff that no one sees or appreciates that makes an application truly complex',
-			img: nodelogo,
+			img: blog,
 			url: '/normal-ui/projects/back-end'
 		}
 	];
