@@ -11,7 +11,7 @@
 			name: 'Pokemon',
 			description: 'Pokemon in vanilla JS',
 			img: firstapp,
-			url: 'https://project.edewindt.com'
+			url: 'https://gleeful-khapse-7c66aa.netlify.app/'
 		},
 		{
 			name: 'Snake',
