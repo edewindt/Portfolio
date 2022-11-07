@@ -61,6 +61,8 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		overflow: hidden;
+		background-attachment: fixed;
 	}
 	h2 {
 		font-size: 3rem;
