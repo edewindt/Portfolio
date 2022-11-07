@@ -1,7 +1,7 @@
 <script>
 	import got from '$lib/assets/GoT API.png';
 	import water from '$lib/assets/water.png';
-	import Projects from '../../../../lib/components/projects.svelte';
+	import Backend from '../../../../lib/components/backend.svelte';
 	const categories = [
 		{
 			name: 'The GoT API',
@@ -21,7 +21,7 @@
 		<h2>Back-end</h2>
 		<div class="categories">
 			{#each categories as { name, description, img, url }}
-				<Projects {name} {description} {img} {url} />
+				<Backend {name} {description} {img} {url} />
 			{/each}
 		</div>
 	</section>
@@ -50,7 +50,7 @@
 	}
 	.categories {
 		display: grid;
-		grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
 		grid-gap: 1rem;
 	}
 </style>

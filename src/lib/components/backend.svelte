@@ -15,8 +15,8 @@
 
 <style>
 	img {
-		height: 10rem;
-		width: 20rem;
+		height: 15rem;
+		width: 17rem;
 		padding: 2rem;
 	}
 	.card {
@@ -29,6 +29,7 @@
 		object-fit: scale-down;
 		padding: 2rem;
 		border-radius: 2rem;
+		max-width: 30rem;
 	}
 	.card:hover {
 		box-shadow: 0 0 0.5rem var(--light);
