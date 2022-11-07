@@ -10,8 +10,8 @@
 		<h2 class="hero-text">Resume</h2>
 		<h3>Profile</h3>
 		<p>
-			I like to break people's expectations, and learn everything I can about anything I'm
-			interested in.
+			I like to defy people's expectations, and learn everything I can about anything I'm interested
+			in. I have an extreme passion for Art and Programming.
 		</p>
 	</div>
 </section>
@@ -23,8 +23,14 @@
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
+		display: flex;
+		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+	}
+	.inner {
+		height: 50rem;
+		width: 50rem;
 	}
 	.hero-text {
 		color: white;
@@ -36,5 +42,6 @@
 	}
 	p {
 		color: var(--light);
+		margin: 1rem;
 	}
 </style>
