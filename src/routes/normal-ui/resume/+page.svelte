@@ -1,5 +1,5 @@
 <script>
-	import hero from '$lib/assets/lavacomp.png';
+	import hero from '$lib/assets/space.jpg';
 </script>
 
 <section
@@ -27,10 +27,12 @@
 		align-items: center;
 		justify-content: center;
 		flex-direction: column;
+		overflow: hidden;
 	}
 	.inner {
-		height: 50rem;
-		width: 50rem;
+		display: grid;
+		max-width: 50rem;
+		width: 100vw;
 	}
 	.hero-text {
 		color: white;
@@ -39,6 +41,7 @@
 	}
 	h3 {
 		color: var(--light);
+		text-align: center;
 	}
 	p {
 		color: var(--light);
