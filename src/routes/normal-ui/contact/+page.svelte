@@ -51,7 +51,8 @@
 		font-size: 2.5rem;
 	}
 	.cont {
-		height: calc(100vh - 3.5rem);
+		height: fit-content;
+		min-height: calc(100vh - 3.5rem);
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
@@ -60,9 +61,8 @@
 		display: flex;
 		align-items: center;
 		flex-direction: column;
-		margin: 2rem;
-		padding-top: 2rem;
-		margin-top: 0;
+		margin: 0rem 2rem;
+		padding: 2rem 0rem;
 	}
 	.contact {
 		display: flex;
