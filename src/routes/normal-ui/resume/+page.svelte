@@ -17,13 +17,24 @@
 		</section>
 		<section class="sec">
 			<h3>Skills and Abilities</h3>
-			<p>
-				I like to defy people's expectations, and learn everything I can about anything I'm
-				interested in. I have an extreme passion for Art and Programming.
-			</p>
+			<ul>
+				<li>Bilangual (Spanish & English)</li>
+				<li>
+					Programming (HTML, CSS, JavaScript, Java, C/C++, Python, Go, GraphQL, NodeJS, Express,
+					CoffeeScript, TypeScript, SQL, MySQL, PostreSQL, MongoDB)
+				</li>
+				<li>Accessibility</li>
+				<li>Responsive Design</li>
+				<li>Graphic Design and Art</li>
+				<li>
+					Search Engine Optimization (Robots.txt, Sitemap.xml, Meta Tags, Canonicals, Open Graph
+					API, On-Page SEO, Off-page SEO)
+				</li>
+				<li>Marketing (Funnels, Customer Journey Mapping, Branding, Competitive Analysis)</li>
+			</ul>
 		</section>
 		<section class="sec">
-			<h3>Profile</h3>
+			<h3>Education</h3>
 			<p>
 				I like to defy people's expectations, and learn everything I can about anything I'm
 				interested in. I have an extreme passion for Art and Programming.
@@ -34,10 +45,12 @@
 
 <style>
 	.sec {
+		background-color: rgba(0, 0, 0, 0.389);
 		border: 1px solid var(--light);
+		border-radius: 7px;
 		padding: 1rem;
 		font-size: 1.3rem;
-		margin: 0.5rem;
+		margin: 2rem;
 	}
 	.cont {
 		height: fit-content;
@@ -50,6 +63,7 @@
 		justify-content: center;
 		flex-direction: column;
 		overflow: hidden;
+		background-attachment: fixed;
 	}
 	.inner {
 		display: grid;
@@ -66,6 +80,12 @@
 		text-align: center;
 	}
 	p {
+		color: var(--light);
+		margin: 1rem;
+	}
+	li {
+		position: relative;
+		left: 2rem;
 		color: var(--light);
 		margin: 1rem;
 	}
