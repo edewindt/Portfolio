@@ -165,5 +165,9 @@
 		padding: 0.5rem 1rem;
 		margin-top: 2rem;
 		width: 100%;
+		border: none;
+		border-radius: 5px;
+		background-color: rgb(215, 63, 89);
+		color: white;
 	}
 </style>

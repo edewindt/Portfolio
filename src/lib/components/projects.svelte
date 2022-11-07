@@ -37,6 +37,7 @@
 	.card p {
 		font-size: 1.25rem;
 		text-align: center;
+		max-width: 20rem;
 	}
 	.card h3 {
 		font-size: 2.5rem;
