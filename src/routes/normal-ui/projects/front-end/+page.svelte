@@ -56,7 +56,8 @@
 
 <style>
 	.cont {
-		height: calc(100vh - 3.5rem);
+		height: fit-content;
+		min-height: calc(100vh - 3.5rem);
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;

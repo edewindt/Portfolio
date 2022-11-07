@@ -23,7 +23,7 @@
 <nav in:fly={{ delay: 250, duration: 1000, y: 500, opacity: 0 }} on:click>
 	<section class="inner-container">
 		<div class="menu">
-			<ul>
+			<ul data-sveltekit-prefetch>
 				{#each nav as { name, url }}
 					<li><a href={url}>{name}</a></li>{/each}
 			</ul>

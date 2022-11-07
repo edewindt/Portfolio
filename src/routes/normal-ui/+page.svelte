@@ -23,7 +23,8 @@
 
 <style>
 	.hero {
-		height: 100vh;
+		height: fit-content;
+		min-height: 100vh;
 		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
