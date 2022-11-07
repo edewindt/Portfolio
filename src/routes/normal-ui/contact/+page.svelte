@@ -40,6 +40,8 @@
 				<label for="">Phone</label><input type="text" />
 
 				<label for="">Message</label><textarea name="" id="" cols="30" rows="10" />
+
+				<button>Submit</button>
 			</form>
 		</div>
 	</section>
@@ -106,6 +108,7 @@
 		border-radius: 3px;
 		padding-left: 0.5rem;
 		font-size: 1.25rem;
+		height: 8rem;
 	}
 	.contact p {
 		margin: 1rem;
@@ -157,5 +160,10 @@
 			width: 40rem;
 			max-width: calc(100vw - 5rem);
 		}
+	}
+	.contact form button {
+		padding: 0.5rem 1rem;
+		margin-top: 2rem;
+		width: 100%;
 	}
 </style>
