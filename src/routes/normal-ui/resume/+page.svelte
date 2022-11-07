@@ -35,10 +35,8 @@
 		</section>
 		<section class="sec">
 			<h3>Education</h3>
-			<p>
-				I like to defy people's expectations, and learn everything I can about anything I'm
-				interested in. I have an extreme passion for Art and Programming.
-			</p>
+			<li>HIGH SCHOOL DIPLOMA: JUNE 1, 2021 - RUFUS KING HIGH SCHOOL</li>
+			<li>UNIVERSITY OF MADISON - DIGITAL MARKETING CERTIFICATE: MAY 2021 - JANUARY 2022</li>
 		</section>
 	</div>
 </div>
@@ -51,6 +49,7 @@
 		padding: 1rem;
 		font-size: 1.3rem;
 		margin: 2rem;
+		color: var(--light);
 	}
 	.cont {
 		height: fit-content;
@@ -76,17 +75,14 @@
 		text-align: center;
 	}
 	h3 {
-		color: var(--light);
 		text-align: center;
 	}
 	p {
-		color: var(--light);
 		margin: 1rem;
 	}
 	li {
 		position: relative;
 		left: 2rem;
-		color: var(--light);
 		margin: 1rem;
 	}
 </style>
