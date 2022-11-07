@@ -2,21 +2,43 @@
 	import hero from '$lib/assets/space.jpg';
 </script>
 
-<section
+<div
 	class="cont"
-	style="  background-image: linear-gradient(rgba(0, 0, 0, 0.5), rgba(0, 0, 0, 0.5)), url({hero});"
+	style="  background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({hero});"
 >
 	<div class="inner">
 		<h2 class="hero-text">Resume</h2>
-		<h3>Profile</h3>
-		<p>
-			I like to defy people's expectations, and learn everything I can about anything I'm interested
-			in. I have an extreme passion for Art and Programming.
-		</p>
+		<section class="sec">
+			<h3>Profile</h3>
+			<p>
+				I like to defy people's expectations, and learn everything I can about anything I'm
+				interested in. I have an extreme passion for Art and Programming.
+			</p>
+		</section>
+		<section class="sec">
+			<h3>Skills and Abilities</h3>
+			<p>
+				I like to defy people's expectations, and learn everything I can about anything I'm
+				interested in. I have an extreme passion for Art and Programming.
+			</p>
+		</section>
+		<section class="sec">
+			<h3>Profile</h3>
+			<p>
+				I like to defy people's expectations, and learn everything I can about anything I'm
+				interested in. I have an extreme passion for Art and Programming.
+			</p>
+		</section>
 	</div>
-</section>
+</div>
 
 <style>
+	.sec {
+		border: 1px solid var(--light);
+		padding: 1rem;
+		font-size: 1.3rem;
+		margin: 0.5rem;
+	}
 	.cont {
 		height: fit-content;
 		min-height: 100vh;
