@@ -3,10 +3,10 @@
 	import water from '$lib/assets/water.png';
 	import water2 from '$lib/assets/watercomp.png';
 	import building from '$lib/assets/buildingcomp.png';
-	import hero2 from '$lib/assets/hero2.webp';
+	import hero from '$lib/assets/hero2.webp';
 	import sm from '$lib/assets/s&m.webp';
 	import plant from '$lib/assets/Plant.png';
-	import violet from '$lib/assets/violet2.png';
+	import violet from '$lib/assets/violet.png';
 	import space from '$lib/assets/space.jpg';
 	import Design from '../../../lib/components/design.svelte';
 	const categories = [
@@ -33,7 +33,7 @@
 		{
 			name: 'No name',
 			description: 'The hero image used on my blog',
-			img: hero2
+			img: hero
 		},
 		{
 			name: 'No name',
