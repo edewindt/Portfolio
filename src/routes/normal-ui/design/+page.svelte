@@ -8,6 +8,7 @@
 	import plant from '$lib/assets/Plant.png';
 	import violet from '$lib/assets/violet2.png';
 	import Backend from '$lib/components/backend.svelte';
+	import Design from '../../../lib/components/design.svelte';
 	const categories = [
 		{
 			name: 'Smoke and Mirrors',
@@ -57,7 +58,7 @@
 		<h2>Design</h2>
 		<div class="categories">
 			{#each categories as { name, description, img, url }}
-				<Backend {name} {description} {img} />
+				<Design {name} {description} {img} />
 			{/each}
 		</div>
 	</section>
