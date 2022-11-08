@@ -2,67 +2,62 @@
 	import lava from '$lib/assets/lavacomp.png';
 	import water from '$lib/assets/water.png';
 	import water2 from '$lib/assets/watercomp.png';
-	import building from '$lib/assets/building.png';
+	import building from '$lib/assets/buildingcomp.png';
 	import hero2 from '$lib/assets/hero2.webp';
 	import sm from '$lib/assets/s&m.webp';
 	import plant from '$lib/assets/Plant.png';
 	import violet from '$lib/assets/violet2.png';
-	import Backend from '../../../../lib/components/backend.svelte';
+	import Backend from '$lib/components/backend.svelte';
 	const categories = [
 		{
 			name: 'Smoke and Mirrors',
 			description: 'A composite of roses and artifitial smoke',
-			img: got,
-			url: 'https://the-got-api-production.up.railway.app/'
+			img: sm
 		},
 		{
 			name: 'Violet',
 			description: 'A digital rendering of one of my favorite anime characters Violet Evergarden',
-			img: got,
-			url: 'https://the-got-api-production.up.railway.app/'
+			img: violet
 		},
 		{
 			name: 'Plant',
 			description: 'A digital rendering of a plant lady',
-			img: got,
-			url: 'https://the-got-api-production.up.railway.app/'
+			img: plant
 		},
 		{
 			name: 'Lava',
 			description: 'A compisite of water and lava',
-			img: got,
-			url: 'https://the-got-api-production.up.railway.app/'
+			img: lava
 		},
 		{
 			name: 'No name',
 			description: 'The hero image used on my blog',
-			img: got,
-			url: 'https://the-got-api-production.up.railway.app/'
+			img: hero2
 		},
 		{
 			name: 'No name',
 			description: 'Composite of jellyfish and a girl in the winter',
-			img: got,
-			url: 'https://the-got-api-production.up.railway.app/'
+			img: water2
 		},
 		{
 			name: 'No name',
 			description: 'Composite of a woman outside in a violet storm',
-			img: got,
-			url: 'https://the-got-api-production.up.railway.app/'
+			img: water
+		},
+		{
+			name: 'No name',
+			description: 'Composite of skyscrapers upside down',
+			img: building
 		}
 	];
 </script>
 
-<div
-	class="cont"
-	style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({water});"
->
+<div class="cont">
 	<section>
 		<h2>Design</h2>
 		<div class="categories">
 			{#each categories as { name, description, img, url }}
-				<Backend {name} {description} {img} {url} />
+				<Backend {name} {description} {img} />
 			{/each}
 		</div>
 	</section>
