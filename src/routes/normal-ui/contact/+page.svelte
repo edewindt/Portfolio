@@ -1,13 +1,19 @@
 <script>
 	import water from '$lib/assets/watercomp.png';
 	import Contact from '../../../lib/components/contact.svelte';
+	import Contactsent from '../../../lib/components/contactsent.svelte';
+	let sent = true;
 </script>
 
 <div
 	class="cont"
 	style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({water});"
 >
-	<Contact />
+	{#if !sent}
+		<Contact />
+	{:else}
+		<Contactsent />
+	{/if}
 </div>
 
 <style>
