@@ -93,7 +93,7 @@
 	.categories {
 		display: grid;
 		grid-template-columns: repeat(auto-fit, minmax(20rem, 1fr));
-		grid-auto-rows: 240px;
+		grid-template-rows: 240px;
 		grid-gap: 0.5rem;
 		margin: 1rem;
 	}
