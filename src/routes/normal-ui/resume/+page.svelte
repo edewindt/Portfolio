@@ -43,7 +43,7 @@
 
 <style>
 	.sec {
-		background-color: rgba(0, 0, 0, 0.389);
+		background-color: rgba(0, 0, 0, 0.678);
 		border: 1px solid var(--light);
 		border-radius: 7px;
 		padding: 1rem;
