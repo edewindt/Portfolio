@@ -3,7 +3,7 @@
 	import water from '$lib/assets/water.png';
 	import water2 from '$lib/assets/watercomp.png';
 	import building from '$lib/assets/buildingcomp.png';
-	import hero from '$lib/assets/hero2.webp';
+	import hero from '$lib/assets/hero.webp';
 	import sm from '$lib/assets/s&m.webp';
 	import plant from '$lib/assets/Plant.png';
 	import violet from '$lib/assets/violet.png';
