@@ -1,5 +1,5 @@
 <script>
-	import got from '$lib/assets/GoT API.png';
+	import got from '$lib/assets/GoTAPI.png';
 	import water from '$lib/assets/water.png';
 	import Backend from '../../../../lib/components/backend.svelte';
 	const categories = [
