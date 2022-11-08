@@ -1,3 +1,10 @@
+<script>
+	import { sent } from '$lib/stores/sent.js';
+	const submit = () => {
+		sent.set(true);
+	};
+</script>
+
 <section>
 	<h1>Contact</h1>
 
@@ -24,7 +31,7 @@
 			</p>
 		</div>
 
-		<form action="">
+		<form on:submit|preventDefault={submit}>
 			<label for="">Name (Required)</label><input type="text" />
 
 			<label for="">Email (Required)</label><input type="text" />

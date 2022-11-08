@@ -2,7 +2,6 @@
 	import { fly } from 'svelte/transition';
 	export let i;
 	export let img;
-	console.log(i);
 </script>
 
 <div class="card">
