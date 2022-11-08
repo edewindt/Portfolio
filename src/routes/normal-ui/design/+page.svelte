@@ -7,7 +7,7 @@
 	import sm from '$lib/assets/s&m.webp';
 	import plant from '$lib/assets/Plant.png';
 	import violet from '$lib/assets/violet2.png';
-	import Backend from '$lib/components/backend.svelte';
+	import space from '$lib/assets/space.jpg';
 	import Design from '../../../lib/components/design.svelte';
 	const categories = [
 		{
@@ -53,12 +53,15 @@
 	];
 </script>
 
-<div class="cont">
+<div
+	class="cont"
+	style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({space});"
+>
 	<section>
 		<h2>Design</h2>
 		<div class="categories">
-			{#each categories as { name, description, img, url }}
-				<Design {name} {description} {img} />
+			{#each categories as { name, description, img, style }}
+				<Design {name} {description} {img} {style} />
 			{/each}
 		</div>
 	</section>

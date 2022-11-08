@@ -1,7 +1,5 @@
 <script>
-	export let name;
 	export let img;
-	export let description;
 </script>
 
 <div class="card">
