@@ -10,9 +10,44 @@
 	import Backend from '../../../../lib/components/backend.svelte';
 	const categories = [
 		{
-			name: 'The GoT API',
-			description:
-				'A backend project that I had a lot of fun with. Displays Game Of Thrones data, quotes, houses, and media',
+			name: 'Smoke and Mirrors',
+			description: 'A composite of roses and artifitial smoke',
+			img: got,
+			url: 'https://the-got-api-production.up.railway.app/'
+		},
+		{
+			name: 'Violet',
+			description: 'A digital rendering of one of my favorite anime characters Violet Evergarden',
+			img: got,
+			url: 'https://the-got-api-production.up.railway.app/'
+		},
+		{
+			name: 'Plant',
+			description: 'A digital rendering of a plant lady',
+			img: got,
+			url: 'https://the-got-api-production.up.railway.app/'
+		},
+		{
+			name: 'Lava',
+			description: 'A compisite of water and lava',
+			img: got,
+			url: 'https://the-got-api-production.up.railway.app/'
+		},
+		{
+			name: 'No name',
+			description: 'The hero image used on my blog',
+			img: got,
+			url: 'https://the-got-api-production.up.railway.app/'
+		},
+		{
+			name: 'No name',
+			description: 'Composite of jellyfish and a girl in the winter',
+			img: got,
+			url: 'https://the-got-api-production.up.railway.app/'
+		},
+		{
+			name: 'No name',
+			description: 'Composite of a woman outside in a violet storm',
 			img: got,
 			url: 'https://the-got-api-production.up.railway.app/'
 		}
