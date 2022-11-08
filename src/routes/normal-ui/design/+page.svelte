@@ -60,8 +60,8 @@
 	<section>
 		<h2>Design</h2>
 		<div class="categories">
-			{#each categories as { name, description, img, style }}
-				<Design {name} {description} {img} {style} />
+			{#each categories as { name, description, img, style }, i}
+				<Design {name} {description} {img} {style} {i} />
 			{/each}
 		</div>
 	</section>
