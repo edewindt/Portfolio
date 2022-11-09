@@ -67,4 +67,11 @@
 		position: relative;
 		cursor: pointer;
 	}
+	@media only screen and (max-width: 400px) {
+		.hero-text {
+			color: white;
+			font-size: 2.5rem;
+			text-align: center;
+		}
+	}
 </style>
