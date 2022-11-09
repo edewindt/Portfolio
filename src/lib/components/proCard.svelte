@@ -41,4 +41,14 @@
 	.card h3 {
 		font-size: 2.5rem;
 	}
+	@media only screen and (max-width: 900px) {
+		.card {
+			margin: 2rem;
+		}
+		img {
+			height: 13rem;
+			width: 15rem;
+			padding: 2rem;
+		}
+	}
 </style>
