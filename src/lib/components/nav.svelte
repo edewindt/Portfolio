@@ -4,7 +4,8 @@
 	import { onMount } from 'svelte';
 	const navsound = new Howl({
 		src: ['/src/lib//assets/Nav.mp3'],
-		volume: 0.5
+		volume: 0.5,
+		html5: true
 	});
 	onMount(() => {
 		navsound.play();

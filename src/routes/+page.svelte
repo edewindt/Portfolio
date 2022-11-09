@@ -5,11 +5,13 @@
 	import { instructions } from '$lib/stores/instructs.js';
 	const clicksound = new Howl({
 		src: ['/src/lib//assets/click.wav'],
-		volume: 0.1
+		volume: 0.1,
+		html5: true
 	});
 	const buttsound = new Howl({
 		src: ['/src/lib//assets/ButtonSound.mp3'],
-		volume: 0.1
+		volume: 0.1,
+		html5: true
 	});
 	let buttons = [
 		{ txt: 'Normal UI', url: 'normal-ui' },
