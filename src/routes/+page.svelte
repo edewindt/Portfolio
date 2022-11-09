@@ -96,6 +96,7 @@
 	.instructs-wrapper {
 		display: flex;
 		justify-content: center;
+		padding: 1rem;
 	}
 	.instructs {
 		border: 2px solid var(--light);
@@ -166,5 +167,23 @@
 		box-shadow: inset 0 0 0.3em var(--light), 0 0 0.3em var(--light);
 		position: relative;
 		cursor: pointer;
+	}
+	@media only screen and (max-width: 575px) {
+		.instructs {
+			position: relative;
+			top: 0;
+		}
+		#close-instructs {
+			position: relative;
+			top: 0;
+			right: 2rem;
+			height: 2rem;
+			font-size: 1rem;
+			padding: 0.35rem;
+			background: transparent;
+			color: var(--light);
+			display: inline-block;
+			transform: scale(1, 0.8);
+		}
 	}
 </style>
