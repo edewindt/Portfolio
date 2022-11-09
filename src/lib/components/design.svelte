@@ -5,7 +5,7 @@
 </script>
 
 <div class="card">
-	<img src={img} alt="" transition:fly={{ delay: i * 100, duration: 300 }} />
+	<img src={img} alt="" transition:fly={{ delay: i * 100, duration: 300 }} loading="lazy" />
 </div>
 
 <style>

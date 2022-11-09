@@ -9,6 +9,9 @@
 	import violet from '$lib/assets/violet.png';
 	import space from '$lib/assets/space.jpg';
 	import Design from '../../../lib/components/design.svelte';
+	import { onMount } from 'svelte';
+	let ready = false;
+	onMount(() => (ready = true));
 	const categories = [
 		{
 			name: 'Smoke and Mirrors',
@@ -53,19 +56,21 @@
 	];
 </script>
 
-<div
-	class="cont"
-	style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({space});"
->
-	<section>
-		<h2>Design</h2>
-		<div class="categories">
-			{#each categories as { name, description, img, style }, i}
-				<Design {name} {description} {img} {style} {i} />
-			{/each}
-		</div>
-	</section>
-</div>
+{#if ready}
+	<div
+		class="cont"
+		style="background-image: linear-gradient(rgba(0, 0, 0, 0.6), rgba(0, 0, 0, 0.6)), url({space});"
+	>
+		<section>
+			<h2>Design</h2>
+			<div class="categories">
+				{#each categories as { name, description, img, style }, i}
+					<Design {name} {description} {img} {style} {i} />
+				{/each}
+			</div>
+		</section>
+	</div>
+{/if}
 
 <style>
 	.cont {
