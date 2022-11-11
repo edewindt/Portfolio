@@ -1,6 +1,7 @@
 <script>
 	import map from '$lib/assets/game/Pokemon Mapz.png';
 	import playerDown from '$lib/assets/game/playerDown.png';
+	import Sprite from '$lib/code/classes.js';
 	import { onMount } from 'svelte';
 	let canvas;
 	onMount(() => {
@@ -14,6 +15,14 @@
 
 		image.src = map;
 		playerImage.src = playerDown;
+
+		// const background = new Sprite({
+		// 	position: {
+		// 		x: -785,
+		// 		y: -650
+		// 	},
+		// 	image: image
+		// });
 
 		const animate = () => {
 			window.requestAnimationFrame(animate);
@@ -37,37 +46,51 @@
 		animate();
 	});
 	const keyPress = (e) => {
-		console.log(e.key);
+		console.log(keys);
 		switch (e.key) {
 			//awsd constrols
 			case 'w':
-				console.log('Up');
+				keys.w.pressed = true;
 				break;
 			case 'a':
-				console.log('left');
+				keys.a.pressed = true;
 				break;
 			case 's':
-				console.log('down');
+				keys.s.pressed = true;
 				break;
 			case 'd':
-				console.log('right');
+				keys.d.pressed = true;
 				break;
 			//arrow controls
 			case 'ArrowUp':
-				console.log('Up');
+				keys.w.pressed = true;
 				break;
 			case 'ArrowLeft':
-				console.log('left');
+				keys.a.pressed = true;
 				break;
 			case 'ArrowDown':
-				console.log('down');
+				keys.s.pressed = true;
 				break;
 			case 'ArrowRight':
-				console.log('right');
+				keys.d.pressed = true;
 				break;
-
 			default:
 				break;
+		}
+	};
+
+	const keys = {
+		w: {
+			pressed: false
+		},
+		a: {
+			pressed: false
+		},
+		s: {
+			pressed: false
+		},
+		d: {
+			pressed: false
 		}
 	};
 </script>
