@@ -32,9 +32,20 @@
 			);
 		};
 	});
+	const keyPress = (e) => {
+		switch (e.key) {
+			case 'w':
+				console.log('Going Up');
+				break;
+
+			default:
+				break;
+		}
+	};
 </script>
 
 <canvas bind:this={canvas} width="1024" height="576" />
+<svelte:window on:keydown={keyPress} />
 
 <style>
 </style>
