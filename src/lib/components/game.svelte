@@ -25,7 +25,7 @@
 				0,
 				playerImage.width / 4,
 				playerImage.height,
-				canvas.width / 2 - playerImage.width,
+				canvas.width / 2 - playerImage.width / 4,
 				canvas.height / 2 - playerImage.height,
 				playerImage.width / 4,
 				playerImage.height
