@@ -1,3 +1,4 @@
+const c = canvas.getContext('2d');
 export default class Sprite {
 	constructor({ position, velocity, image }) {
 		this.position = position;

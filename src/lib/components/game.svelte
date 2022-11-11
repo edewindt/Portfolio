@@ -1,9 +1,9 @@
 <script>
 	import map from '$lib/assets/game/Pokemon Mapz.png';
 	import playerDown from '$lib/assets/game/playerDown.png';
-	import Sprite from '$lib/code/classes.js';
 	import { onMount } from 'svelte';
 	let canvas;
+
 	onMount(() => {
 		const c = canvas.getContext('2d');
 
@@ -16,19 +16,30 @@
 		image.src = map;
 		playerImage.src = playerDown;
 
-		// const background = new Sprite({
-		// 	position: {
-		// 		x: -785,
-		// 		y: -650
-		// 	},
-		// 	image: image
-		// });
+		class Sprite {
+			constructor({ position, velocity, image }) {
+				this.position = position;
+				this.image = image;
+			}
+			draw() {
+				c.drawImage(this.image, 475, -350);
+			}
+		}
+
+		const background = new Sprite({
+			position: {
+				x: 475,
+				y: -350
+			},
+			image: image
+		});
 
 		const animate = () => {
 			window.requestAnimationFrame(animate);
 			image.onload = () => {
 				c.drawImage(image, -475, -350);
 			};
+			// background.draw();
 			playerImage.onload = () => {
 				c.drawImage(
 					playerImage,
