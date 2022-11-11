@@ -15,22 +15,26 @@
 		image.src = map;
 		playerImage.src = playerDown;
 
-		image.onload = () => {
-			c.drawImage(image, -475, -350);
+		const animate = () => {
+			window.requestAnimationFrame(animate);
+			image.onload = () => {
+				c.drawImage(image, -475, -350);
+			};
+			playerImage.onload = () => {
+				c.drawImage(
+					playerImage,
+					0,
+					0,
+					playerImage.width / 4,
+					playerImage.height,
+					canvas.width / 2 - playerImage.width / 4,
+					canvas.height / 2 - playerImage.height,
+					playerImage.width / 4,
+					playerImage.height
+				);
+			};
 		};
-		playerImage.onload = () => {
-			c.drawImage(
-				playerImage,
-				0,
-				0,
-				playerImage.width / 4,
-				playerImage.height,
-				canvas.width / 2 - playerImage.width / 4,
-				canvas.height / 2 - playerImage.height,
-				playerImage.width / 4,
-				playerImage.height
-			);
-		};
+		animate();
 	});
 	const keyPress = (e) => {
 		console.log(e.key);
