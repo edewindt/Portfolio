@@ -1,5 +1,6 @@
 <script>
 	import map from '$lib/assets/game/Pokemon Mapz.png';
+	import playerDown from '$lib/assets/game/playerDown.png';
 	import { onMount } from 'svelte';
 	let canvas;
 	onMount(() => {
@@ -9,11 +10,16 @@
 		c.fillRect(0, 0, canvas.width, canvas.height);
 		console.log(c);
 		const image = new Image();
+		const playerImage = new Image();
+
 		image.src = map;
-		console.log(image);
+		playerImage.src = playerDown;
 
 		image.onload = () => {
 			c.drawImage(image, -450, -375);
+		};
+		playerImage.onload = () => {
+			c.drawImage(playerImage, 0, 0);
 		};
 	});
 </script>
