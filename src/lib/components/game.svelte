@@ -33,9 +33,33 @@
 		};
 	});
 	const keyPress = (e) => {
+		console.log(e.key);
 		switch (e.key) {
+			//awsd constrols
 			case 'w':
-				console.log('Going Up');
+				console.log('Up');
+				break;
+			case 'a':
+				console.log('left');
+				break;
+			case 's':
+				console.log('down');
+				break;
+			case 'd':
+				console.log('right');
+				break;
+			//arrow controls
+			case 'ArrowUp':
+				console.log('Up');
+				break;
+			case 'ArrowLeft':
+				console.log('left');
+				break;
+			case 'ArrowDown':
+				console.log('down');
+				break;
+			case 'ArrowRight':
+				console.log('right');
 				break;
 
 			default:
