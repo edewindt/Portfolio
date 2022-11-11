@@ -16,10 +16,14 @@
 		playerImage.src = playerDown;
 
 		image.onload = () => {
-			c.drawImage(image, -450, -375);
+			c.drawImage(image, -475, -350);
 		};
 		playerImage.onload = () => {
-			c.drawImage(playerImage, 0, 0);
+			c.drawImage(
+				playerImage,
+				canvas.width / 2 - playerImage.width,
+				canvas.height / 2 - playerImage.height
+			);
 		};
 	});
 </script>
