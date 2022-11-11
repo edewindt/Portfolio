@@ -13,7 +13,7 @@
 		console.log(image);
 
 		image.onload = () => {
-			c.drawImage(image, 0, 0);
+			c.drawImage(image, -450, -375);
 		};
 	});
 </script>
