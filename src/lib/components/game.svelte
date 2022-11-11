@@ -8,6 +8,13 @@
 		c.fillStyle = 'white';
 		c.fillRect(0, 0, canvas.width, canvas.height);
 		console.log(c);
+		const image = new Image();
+		image.src = map;
+		console.log(image);
+
+		image.onload = () => {
+			c.drawImage(image, 0, 0);
+		};
 	});
 </script>
 
