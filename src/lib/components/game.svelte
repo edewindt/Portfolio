@@ -21,8 +21,14 @@
 		playerImage.onload = () => {
 			c.drawImage(
 				playerImage,
+				0,
+				0,
+				playerImage.width / 4,
+				playerImage.height,
 				canvas.width / 2 - playerImage.width,
-				canvas.height / 2 - playerImage.height
+				canvas.height / 2 - playerImage.height,
+				playerImage.width / 4,
+				playerImage.height
 			);
 		};
 	});
