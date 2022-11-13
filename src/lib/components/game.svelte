@@ -9,14 +9,13 @@
 
 		c.fillStyle = 'white';
 		c.fillRect(0, 0, canvas.width, canvas.height);
-		console.log(c);
 		const image = new Image();
 		const playerImage = new Image();
 
 		image.src = map;
 		playerImage.src = playerDown;
 
-		let backgroundImage = {
+		let background = {
 			position: {
 				x: -475,
 				y: -350
@@ -27,43 +26,29 @@
 			}
 		};
 
-		const keys = {
-			a: {
-				pressed: false
-			},
-			s: {
-				pressed: false
-			},
-			d: {
-				pressed: false
-			},
-			w: {
-				pressed: false
-			}
-		};
-
 		const animate = () => {
 			window.requestAnimationFrame(animate);
-			backgroundImage.image.onload = () => {
-				backgroundImage.draw();
-			};
-			playerImage.onload = () => {
-				c.drawImage(
-					playerImage,
-					0,
-					0,
-					playerImage.width / 4,
-					playerImage.height,
-					canvas.width / 2 - playerImage.width / 4,
-					canvas.height / 2 - playerImage.height,
-					playerImage.width / 4,
-					playerImage.height
-				);
-			};
+			if (keys.s.pressed) {
+				let b = background.position;
+				b.y = b.y - 3;
+				console.log(b);
+			}
+			background.draw();
+			c.drawImage(
+				playerImage,
+				0,
+				0,
+				playerImage.width / 4,
+				playerImage.height,
+				canvas.width / 2 - playerImage.width / 4,
+				canvas.height / 2 - playerImage.height,
+				playerImage.width / 4,
+				playerImage.height
+			);
 		};
 		animate();
 	});
-	const keyPress = (e) => {
+	const keyDown = (e) => {
 		console.log(keys);
 		switch (e.key) {
 			//awsd constrols
@@ -97,6 +82,39 @@
 		}
 	};
 
+	const keyUp = (e) => {
+		switch (e.key) {
+			//awsd constrols
+			case 'w':
+				keys.w.pressed = false;
+				break;
+			case 'a':
+				keys.a.pressed = false;
+				break;
+			case 's':
+				keys.s.pressed = false;
+				break;
+			case 'd':
+				keys.d.pressed = false;
+				break;
+			//arrow controls
+			case 'ArrowUp':
+				keys.w.pressed = false;
+				break;
+			case 'ArrowLeft':
+				keys.a.pressed = false;
+				break;
+			case 'ArrowDown':
+				keys.s.pressed = false;
+				break;
+			case 'ArrowRight':
+				keys.d.pressed = false;
+				break;
+			default:
+				break;
+		}
+	};
+
 	const keys = {
 		w: {
 			pressed: false
@@ -114,7 +132,7 @@
 </script>
 
 <canvas bind:this={canvas} width="1024" height="576" />
-<svelte:window on:keydown={keyPress} />
+<svelte:window on:keydown={keyDown} on:keyup={keyUp} />
 
 <style>
 </style>
