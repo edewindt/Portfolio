@@ -27,6 +27,21 @@
 			}
 		};
 
+		const keys = {
+			a: {
+				pressed: false
+			},
+			s: {
+				pressed: false
+			},
+			d: {
+				pressed: false
+			},
+			w: {
+				pressed: false
+			}
+		};
+
 		const animate = () => {
 			window.requestAnimationFrame(animate);
 			backgroundImage.image.onload = () => {
