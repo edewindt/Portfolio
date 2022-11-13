@@ -31,19 +31,15 @@
 			if (keys.s.pressed) {
 				let b = background.position;
 				b.y = b.y - 3;
-				console.log(b);
 			} else if (keys.a.pressed) {
 				let b = background.position;
 				b.x = b.x + 3;
-				console.log(b);
 			} else if (keys.w.pressed) {
 				let b = background.position;
 				b.y = b.y + 3;
-				console.log(b);
 			} else if (keys.d.pressed) {
 				let b = background.position;
 				b.x = b.x - 3;
-				console.log(b);
 			}
 
 			background.draw();
