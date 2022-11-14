@@ -30,16 +30,16 @@
 			window.requestAnimationFrame(animate);
 			if (keys.s.pressed) {
 				let b = background.position;
-				b.y = b.y - 3;
+				b.y = b.y - 6;
 			} else if (keys.a.pressed) {
 				let b = background.position;
-				b.x = b.x + 3;
+				b.x = b.x + 6;
 			} else if (keys.w.pressed) {
 				let b = background.position;
-				b.y = b.y + 3;
+				b.y = b.y + 6;
 			} else if (keys.d.pressed) {
 				let b = background.position;
-				b.x = b.x - 3;
+				b.x = b.x - 6;
 			}
 
 			background.draw();
