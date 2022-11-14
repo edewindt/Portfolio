@@ -4,7 +4,12 @@
 	import { onMount } from 'svelte';
 	import collision from '$lib/code/collisions.js';
 	let canvas;
-	console.log(collision);
+
+	const collisionsMap = [];
+	for (let i = 0; i < collision.length; i += 70) {
+		collisionsMap.push(collision.slice(i, 70 + i));
+	}
+	console.log(collisionsMap);
 	onMount(() => {
 		const c = canvas.getContext('2d');
 
