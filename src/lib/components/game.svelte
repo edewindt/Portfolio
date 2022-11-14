@@ -28,18 +28,18 @@
 
 		const animate = () => {
 			window.requestAnimationFrame(animate);
-			if (keys.s.pressed) {
+			if (keys.s.pressed && lastkey === 's') {
 				let b = background.position;
-				b.y = b.y - 6;
-			} else if (keys.a.pressed) {
+				b.y -= 6;
+			} else if (keys.a.pressed && lastkey === 'a') {
 				let b = background.position;
-				b.x = b.x + 6;
-			} else if (keys.w.pressed) {
+				b.x += 6;
+			} else if (keys.w.pressed && lastkey === 'w') {
 				let b = background.position;
-				b.y = b.y + 6;
-			} else if (keys.d.pressed) {
+				b.y += 6;
+			} else if (keys.d.pressed && lastkey === 'd') {
 				let b = background.position;
-				b.x = b.x - 6;
+				b.x -= 6;
 			}
 
 			background.draw();
@@ -57,34 +57,43 @@
 		};
 		animate();
 	});
+	let lastkey = '';
 	const keyDown = (e) => {
 		console.log(keys);
 		switch (e.key) {
 			//awsd constrols
 			case 'w':
 				keys.w.pressed = true;
+				lastkey = 'w';
 				break;
 			case 'a':
 				keys.a.pressed = true;
+				lastkey = 'a';
 				break;
 			case 's':
 				keys.s.pressed = true;
+				lastkey = 's';
 				break;
 			case 'd':
 				keys.d.pressed = true;
+				lastkey = 'd';
 				break;
 			//arrow controls
 			case 'ArrowUp':
 				keys.w.pressed = true;
+				lastkey = 'w';
 				break;
 			case 'ArrowLeft':
 				keys.a.pressed = true;
+				lastkey = 'a';
 				break;
 			case 'ArrowDown':
 				keys.s.pressed = true;
+				lastkey = 's';
 				break;
 			case 'ArrowRight':
 				keys.d.pressed = true;
+				lastkey = 'd';
 				break;
 			default:
 				break;
