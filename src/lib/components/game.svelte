@@ -2,8 +2,9 @@
 	import map from '$lib/assets/game/Pokemon Mapz.png';
 	import playerDown from '$lib/assets/game/playerDown.png';
 	import { onMount } from 'svelte';
+	import collision from '$lib/code/collisions.js';
 	let canvas;
-
+	console.log(collision);
 	onMount(() => {
 		const c = canvas.getContext('2d');
 
@@ -59,7 +60,6 @@
 	});
 	let lastkey = '';
 	const keyDown = (e) => {
-		console.log(keys);
 		switch (e.key) {
 			//awsd constrols
 			case 'w':
