@@ -1,6 +1,9 @@
 <script>
 	import map from '$lib/assets/game/Pokemon Mapz.png';
 	import playerDown from '$lib/assets/game/playerDown.png';
+	import playerUp from '$lib/assets/game/playerUp.png';
+	import playerRight from '$lib/assets/game/playerRight.png';
+	import playerLeft from '$lib/assets/game/playerLeft.png';
 	import { onMount } from 'svelte';
 	import collision from '$lib/code/collisions.js';
 	let canvas;
@@ -19,9 +22,16 @@
 		c.fillRect(0, 0, canvas.width, canvas.height);
 		const image = new Image();
 		const playerImage = new Image();
+		const playerImageUp = new Image();
+		const playerImageRight = new Image();
+		const playerImageLeft = new Image();
 
 		image.src = map;
 		playerImage.src = playerDown;
+		playerImageUp.src = playerUp;
+		playerImageLeft.src = playerLeft;
+		playerImageRight.src = playerRight;
+
 		const offset = {
 			x: -475,
 			y: -350
@@ -44,15 +54,24 @@
 				y: canvas.height / 2 - 68 / 2
 			},
 			frames: {
-				max: 4
+				max: 4,
+				val: 0,
+				elapsed: 0
 			},
 			image: playerImage,
 			width: 192 / 4,
 			height: 68,
+			moving: false,
+			sprites: {
+				up: playerImageUp,
+				down: playerImage,
+				right: playerImageRight,
+				left: playerImageLeft
+			},
 			draw() {
 				c.drawImage(
 					this.image,
-					0,
+					this.frames.val * 48,
 					0,
 					this.image.width / this.frames.max,
 					this.image.height,
@@ -61,6 +80,13 @@
 					this.image.width / this.frames.max,
 					this.image.height
 				);
+				if (!this.moving) return;
+				this.frames.elapsed++;
+
+				if (this.frames.elapsed % 10 === 0) {
+					if (this.frames.val < this.frames.max - 1) this.frames.val++;
+					else this.frames.val = 0;
+				}
 			}
 		};
 		class Boundary {
@@ -70,7 +96,7 @@
 				this.height = 48;
 			}
 			draw() {
-				c.fillStyle = 'red';
+				c.fillStyle = 'rgba(0,0,0,0)';
 				c.fillRect(this.position.x, this.position.y, this.width, this.height);
 			}
 		}
@@ -111,7 +137,10 @@
 		const animate = () => {
 			window.requestAnimationFrame(animate);
 			let moving = true;
+			player.moving = false;
 			if (keys.s.pressed && lastkey === 's') {
+				player.moving = true;
+				player.image = player.sprites.down;
 				for (let i = 0; i < boundaries.length; i++) {
 					const boundary = boundaries[i];
 					if (
@@ -136,6 +165,8 @@
 						mov.position.y -= 6;
 					});
 			} else if (keys.a.pressed && lastkey === 'a') {
+				player.moving = true;
+				player.image = player.sprites.left;
 				for (let i = 0; i < boundaries.length; i++) {
 					const boundary = boundaries[i];
 					if (
@@ -160,6 +191,8 @@
 						mov.position.x += 6;
 					});
 			} else if (keys.w.pressed && lastkey === 'w') {
+				player.moving = true;
+				player.image = player.sprites.up;
 				for (let i = 0; i < boundaries.length; i++) {
 					const boundary = boundaries[i];
 					if (
@@ -184,6 +217,8 @@
 						mov.position.y += 6;
 					});
 			} else if (keys.d.pressed && lastkey === 'd') {
+				player.moving = true;
+				player.image = player.sprites.right;
 				for (let i = 0; i < boundaries.length; i++) {
 					const boundary = boundaries[i];
 					if (
