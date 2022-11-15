@@ -49,41 +49,55 @@
 			}
 		}
 
-		collisionsMap.forEach((row, i) => {
-			row.forEach((symbol, j) => {
-				if (symbol === 1025)
-					boundaries.push(
-						new Boundary({
-							position: {
-								x: j * 48 + offset.x,
-								y: i * 48 + offset.y
-							}
-						})
-					);
-			});
+		// collisionsMap.forEach((row, i) => {
+		// 	row.forEach((symbol, j) => {
+		// 		if (symbol === 1025)
+		// 			boundaries.push(
+		// 				new Boundary({
+		// 					position: {
+		// 						x: j * 48 + offset.x,
+		// 						y: i * 48 + offset.y
+		// 					}
+		// 				})
+		// 			);
+		// 	});
+		// });
+		const testBoundary = new Boundary({
+			position: {
+				x: 400,
+				y: 400
+			}
 		});
 
 		console.log(boundaries);
+
+		const movables = [background, testBoundary];
+
 		const animate = () => {
 			window.requestAnimationFrame(animate);
 			if (keys.s.pressed && lastkey === 's') {
-				let b = background.position;
-				b.y -= 6;
+				movables.forEach((mov) => {
+					mov.position.y -= 6;
+				});
 			} else if (keys.a.pressed && lastkey === 'a') {
-				let b = background.position;
-				b.x += 6;
+				movables.forEach((mov) => {
+					mov.position.x += 6;
+				});
 			} else if (keys.w.pressed && lastkey === 'w') {
-				let b = background.position;
-				b.y += 6;
+				movables.forEach((mov) => {
+					mov.position.y += 6;
+				});
 			} else if (keys.d.pressed && lastkey === 'd') {
-				let b = background.position;
-				b.x -= 6;
+				movables.forEach((mov) => {
+					mov.position.x -= 6;
+				});
 			}
 
 			background.draw();
-			boundaries.forEach((boundary) => {
-				boundary.draw();
-			});
+			// boundaries.forEach((boundary) => {
+			// 	boundary.draw();
+			// });
+			testBoundary.draw();
 			c.drawImage(
 				playerImage,
 				0,
