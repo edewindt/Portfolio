@@ -75,19 +75,19 @@
 			}
 		}
 
-		// collisionsMap.forEach((row, i) => {
-		// 	row.forEach((symbol, j) => {
-		// 		if (symbol === 1025)
-		// 			boundaries.push(
-		// 				new Boundary({
-		// 					position: {
-		// 						x: j * 48 + offset.x,
-		// 						y: i * 48 + offset.y
-		// 					}
-		// 				})
-		// 			);
-		// 	});
-		// });
+		collisionsMap.forEach((row, i) => {
+			row.forEach((symbol, j) => {
+				if (symbol === 1025)
+					boundaries.push(
+						new Boundary({
+							position: {
+								x: j * 48 + offset.x,
+								y: i * 48 + offset.y
+							}
+						})
+					);
+			});
+		});
 		const testBoundary = new Boundary({
 			position: {
 				x: 400,
@@ -97,43 +97,124 @@
 
 		console.log(boundaries);
 
-		const movables = [background, testBoundary];
+		const movables = [background, ...boundaries];
+
+		const rectCollision = ({ rectangle1, rectangle2 }) => {
+			return (
+				rectangle1.position.x + rectangle1.width >= rectangle2.position.x &&
+				rectangle1.position.x <= rectangle2.position.x + rectangle2.width &&
+				rectangle1.position.y <= rectangle2.position.y + rectangle2.height &&
+				rectangle1.position.y + rectangle1.height >= rectangle2.position.y
+			);
+		};
 
 		const animate = () => {
 			window.requestAnimationFrame(animate);
+			let moving = true;
 			if (keys.s.pressed && lastkey === 's') {
-				movables.forEach((mov) => {
-					mov.position.y -= 6;
-				});
+				for (let i = 0; i < boundaries.length; i++) {
+					const boundary = boundaries[i];
+					if (
+						rectCollision({
+							rectangle1: player,
+							rectangle2: {
+								...boundary,
+								position: {
+									x: boundary.position.x,
+									y: boundary.position.y - 6
+								}
+							}
+						})
+					) {
+						console.log('colliding');
+						moving = false;
+						break;
+					}
+				}
+				if (moving)
+					movables.forEach((mov) => {
+						mov.position.y -= 6;
+					});
 			} else if (keys.a.pressed && lastkey === 'a') {
-				movables.forEach((mov) => {
-					mov.position.x += 6;
-				});
+				for (let i = 0; i < boundaries.length; i++) {
+					const boundary = boundaries[i];
+					if (
+						rectCollision({
+							rectangle1: player,
+							rectangle2: {
+								...boundary,
+								position: {
+									x: boundary.position.x + 6,
+									y: boundary.position.y
+								}
+							}
+						})
+					) {
+						console.log('colliding');
+						moving = false;
+						break;
+					}
+				}
+				if (moving)
+					movables.forEach((mov) => {
+						mov.position.x += 6;
+					});
 			} else if (keys.w.pressed && lastkey === 'w') {
-				movables.forEach((mov) => {
-					mov.position.y += 6;
-				});
+				for (let i = 0; i < boundaries.length; i++) {
+					const boundary = boundaries[i];
+					if (
+						rectCollision({
+							rectangle1: player,
+							rectangle2: {
+								...boundary,
+								position: {
+									x: boundary.position.x,
+									y: boundary.position.y + 6
+								}
+							}
+						})
+					) {
+						console.log('colliding');
+						moving = false;
+						break;
+					}
+				}
+				if (moving)
+					movables.forEach((mov) => {
+						mov.position.y += 6;
+					});
 			} else if (keys.d.pressed && lastkey === 'd') {
-				movables.forEach((mov) => {
-					mov.position.x -= 6;
-				});
+				for (let i = 0; i < boundaries.length; i++) {
+					const boundary = boundaries[i];
+					if (
+						rectCollision({
+							rectangle1: player,
+							rectangle2: {
+								...boundary,
+								position: {
+									x: boundary.position.x - 6,
+									y: boundary.position.y
+								}
+							}
+						})
+					) {
+						console.log('colliding');
+						moving = false;
+						break;
+					}
+				}
+				if (moving)
+					movables.forEach((mov) => {
+						mov.position.x -= 6;
+					});
 			}
 
 			background.draw();
-			// boundaries.forEach((boundary) => {
-			// 	boundary.draw();
-			// });
-			testBoundary.draw();
+			boundaries.forEach((boundary) => {
+				boundary.draw();
+			});
+			// testBoundary.draw();
 			player.draw();
-
-			if (
-				player.position.x + player.width >= testBoundary.position.x &&
-				player.position.x <= testBoundary.position.x + testBoundary.width &&
-				player.position.y <= testBoundary.position.y + testBoundary.height &&
-				player.position.y + player.height >= testBoundary.position.y
-			) {
-				console.log('colliding');
-			}
 		};
 		animate();
 	});
