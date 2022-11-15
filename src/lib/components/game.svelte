@@ -37,6 +37,32 @@
 				c.drawImage(this.image, this.position.x, this.position.y);
 			}
 		};
+
+		let player = {
+			position: {
+				x: canvas.width / 2 - 192 / 4 / 2,
+				y: canvas.height / 2 - 68 / 2
+			},
+			frames: {
+				max: 4
+			},
+			image: playerImage,
+			width: 192 / 4,
+			height: 68,
+			draw() {
+				c.drawImage(
+					this.image,
+					0,
+					0,
+					this.image.width / this.frames.max,
+					this.image.height,
+					this.position.x,
+					this.position.y,
+					this.image.width / this.frames.max,
+					this.image.height
+				);
+			}
+		};
 		class Boundary {
 			constructor({ position }) {
 				this.position = position;
@@ -98,17 +124,16 @@
 			// 	boundary.draw();
 			// });
 			testBoundary.draw();
-			c.drawImage(
-				playerImage,
-				0,
-				0,
-				playerImage.width / 4,
-				playerImage.height,
-				canvas.width / 2 - playerImage.width / 4,
-				canvas.height / 2 - playerImage.height,
-				playerImage.width / 4,
-				playerImage.height
-			);
+			player.draw();
+
+			if (
+				player.position.x + player.width >= testBoundary.position.x &&
+				player.position.x <= testBoundary.position.x + testBoundary.width &&
+				player.position.y <= testBoundary.position.y + testBoundary.height &&
+				player.position.y + player.height >= testBoundary.position.y
+			) {
+				console.log('colliding');
+			}
 		};
 		animate();
 	});
