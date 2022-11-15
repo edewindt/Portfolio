@@ -9,7 +9,9 @@
 	for (let i = 0; i < collision.length; i += 70) {
 		collisionsMap.push(collision.slice(i, 70 + i));
 	}
-	console.log(collisionsMap);
+
+	const boundaries = [];
+
 	onMount(() => {
 		const c = canvas.getContext('2d');
 
@@ -20,18 +22,48 @@
 
 		image.src = map;
 		playerImage.src = playerDown;
+		const offset = {
+			x: -475,
+			y: -350
+		};
 
 		let background = {
 			position: {
-				x: -475,
-				y: -350
+				x: offset.x,
+				y: offset.y
 			},
 			image,
 			draw() {
 				c.drawImage(this.image, this.position.x, this.position.y);
 			}
 		};
+		class Boundary {
+			constructor({ position }) {
+				this.position = position;
+				this.width = 48;
+				this.height = 48;
+			}
+			draw() {
+				c.fillStyle = 'red';
+				c.fillRect(this.position.x, this.position.y, this.width, this.height);
+			}
+		}
 
+		collisionsMap.forEach((row, i) => {
+			row.forEach((symbol, j) => {
+				if (symbol === 1025)
+					boundaries.push(
+						new Boundary({
+							position: {
+								x: j * 48 + offset.x,
+								y: i * 48 + offset.y
+							}
+						})
+					);
+			});
+		});
+
+		console.log(boundaries);
 		const animate = () => {
 			window.requestAnimationFrame(animate);
 			if (keys.s.pressed && lastkey === 's') {
@@ -49,6 +81,9 @@
 			}
 
 			background.draw();
+			boundaries.forEach((boundary) => {
+				boundary.draw();
+			});
 			c.drawImage(
 				playerImage,
 				0,
