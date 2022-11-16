@@ -17,7 +17,7 @@
 		{ name: 'CV/Resume', url: '/normal-ui/resume' },
 		{ name: 'Contact', url: '/normal-ui/contact' },
 		{ name: 'Design', url: '/normal-ui/design' },
-		{ name: 'Test', url: '/test' }
+		{ name: 'Game', url: '/game-ui' }
 	];
 </script>
 

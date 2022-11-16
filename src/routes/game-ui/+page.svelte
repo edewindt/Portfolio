@@ -1,6 +1,5 @@
 <script>
-	import Comingsoon from '../../lib/components/comingsoon.svelte';
+	import Game from '../../lib/components/game.svelte';
 </script>
 
-<h1>Game UI</h1>
-<Comingsoon />
+<Game />
