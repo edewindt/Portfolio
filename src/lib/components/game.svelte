@@ -342,10 +342,18 @@
 			pressed: false
 		}
 	};
+	const cw = 1024;
+	const ch = 576;
 </script>
 
-<canvas bind:this={canvas} width="1024" height="576" />
+<div class="wrap"><canvas bind:this={canvas} width={cw} height={ch} /></div>
 <svelte:window on:keydown={keyDown} on:keyup={keyUp} />
 
 <style>
+	.wrap {
+		display: flex;
+		justify-content: center;
+		height: 100vh;
+		overflow: hidden;
+	}
 </style>
