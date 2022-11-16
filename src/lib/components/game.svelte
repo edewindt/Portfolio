@@ -1,11 +1,13 @@
 <script>
 	import map from '$lib/assets/game/Pokemon Mapz.png';
+	import map2 from '$lib/assets/game/myMap.png';
 	import playerDown from '$lib/assets/game/playerDown.png';
 	import playerUp from '$lib/assets/game/playerUp.png';
 	import playerRight from '$lib/assets/game/playerRight.png';
 	import playerLeft from '$lib/assets/game/playerLeft.png';
 	import { onMount } from 'svelte';
-	import collision from '$lib/code/collisions.js';
+	import collision from '$lib/code/collisions2.js';
+	import over from '$lib/assets/game/over.png';
 	let canvas;
 
 	const collisionsMap = [];
@@ -25,16 +27,18 @@
 		const playerImageUp = new Image();
 		const playerImageRight = new Image();
 		const playerImageLeft = new Image();
+		const foreimg = new Image();
 
-		image.src = map;
+		image.src = map2;
+		foreimg.src = over;
 		playerImage.src = playerDown;
 		playerImageUp.src = playerUp;
 		playerImageLeft.src = playerLeft;
 		playerImageRight.src = playerRight;
 
 		const offset = {
-			x: -475,
-			y: -350
+			x: -800,
+			y: -700
 		};
 
 		let background = {
@@ -43,6 +47,17 @@
 				y: offset.y
 			},
 			image,
+			draw() {
+				c.drawImage(this.image, this.position.x, this.position.y);
+			}
+		};
+
+		let foreground = {
+			position: {
+				x: offset.x,
+				y: offset.y
+			},
+			image: foreimg,
 			draw() {
 				c.drawImage(this.image, this.position.x, this.position.y);
 			}
@@ -103,7 +118,7 @@
 
 		collisionsMap.forEach((row, i) => {
 			row.forEach((symbol, j) => {
-				if (symbol === 1025)
+				if (symbol === 4097)
 					boundaries.push(
 						new Boundary({
 							position: {
@@ -114,16 +129,10 @@
 					);
 			});
 		});
-		const testBoundary = new Boundary({
-			position: {
-				x: 400,
-				y: 400
-			}
-		});
 
 		console.log(boundaries);
 
-		const movables = [background, ...boundaries];
+		const movables = [background, ...boundaries, foreground];
 
 		const rectCollision = ({ rectangle1, rectangle2 }) => {
 			return (
@@ -250,6 +259,7 @@
 			});
 			// testBoundary.draw();
 			player.draw();
+			foreground.draw();
 		};
 		animate();
 	});
