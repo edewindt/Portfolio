@@ -1,5 +1,6 @@
 <script>
 	import map from '$lib/assets/game/Pokemon Mapz.png';
+	import triggers from '$lib/code/triggers.js';
 	import map2 from '$lib/assets/game/myMap.png';
 	import playerDown from '$lib/assets/game/playerDown.png';
 	import playerUp from '$lib/assets/game/playerUp.png';
@@ -15,8 +16,16 @@
 		collisionsMap.push(collision.slice(i, 70 + i));
 	}
 
+	const triggerZones = [];
+	for (let i = 0; i < triggers.length; i += 70) {
+		triggerZones.push(triggers.slice(i, 70 + i));
+	}
 	const boundaries = [];
-
+	const triggers1 = [];
+	const triggers2 = [];
+	const triggers3 = [];
+	const triggers4 = [];
+	const triggers5 = [];
 	onMount(() => {
 		const c = canvas.getContext('2d');
 
@@ -111,7 +120,7 @@
 				this.height = 48;
 			}
 			draw() {
-				c.fillStyle = 'rgba(0,0,0,0)';
+				c.fillStyle = 'blue';
 				c.fillRect(this.position.x, this.position.y, this.width, this.height);
 			}
 		}
@@ -130,9 +139,60 @@
 			});
 		});
 
-		console.log(boundaries);
+		triggerZones.forEach((row, i) => {
+			row.forEach((symbol, j) => {
+				if (symbol === 4097)
+					triggers1.push(
+						new Boundary({
+							position: {
+								x: j * 48 + offset.x,
+								y: i * 48 + offset.y
+							}
+						})
+					);
+				// } else if (symbol == -2148) {
+				// 	triggers2.push(
+				// 		new Boundary({
+				// 			position: {
+				// 				x: j * 48 + offset.x,
+				// 				y: i * 48 + offset.y
+				// 			}
+				// 		})
+				// 	);
+				// } else if (symbol == -2516) {
+				// 	triggers3.push(
+				// 		new Boundary({
+				// 			position: {
+				// 				x: j * 48 + offset.x,
+				// 				y: i * 48 + offset.y
+				// 			}
+				// 		})
+				// 	);
+				// } else if (symbol == -2260) {
+				// 	triggers4.push(
+				// 		new Boundary({
+				// 			position: {
+				// 				x: j * 48 + offset.x,
+				// 				y: i * 48 + offset.y
+				// 			}
+				// 		})
+				// 	);
+				// } else if (symbol == -2520) {
+				// 	triggers5.push(
+				// 		new Boundary({
+				// 			position: {
+				// 				x: j * 48 + offset.x,
+				// 				y: i * 48 + offset.y
+				// 			}
+				// 		})
+				// 	);
+				// }
+			});
+		});
 
-		const movables = [background, ...boundaries, foreground];
+		console.log(triggers1);
+		console.log(boundaries);
+		const movables = [background, ...boundaries, foreground, ...triggers1];
 
 		const rectCollision = ({ rectangle1, rectangle2 }) => {
 			return (
@@ -254,10 +314,26 @@
 			}
 
 			background.draw();
-			boundaries.forEach((boundary) => {
+			// boundaries.forEach((boundary) => {
+			// 	boundary.draw();
+			// });
+
+			triggers1.forEach((boundary) => {
 				boundary.draw();
 			});
-			// testBoundary.draw();
+			// triggers2.forEach((boundary) => {
+			// 	boundary.draw();
+			// });
+			// triggers3.forEach((boundary) => {
+			// 	boundary.draw();
+			// });
+			// triggers4.forEach((boundary) => {
+			// 	boundary.draw();
+			// });
+			// triggers5.forEach((boundary) => {
+			// 	boundary.draw();
+			// });
+
 			player.draw();
 			foreground.draw();
 		};
