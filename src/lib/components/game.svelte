@@ -141,7 +141,7 @@
 
 		triggerZones.forEach((row, i) => {
 			row.forEach((symbol, j) => {
-				if (symbol === 4097)
+				if (symbol === 4097) {
 					triggers1.push(
 						new Boundary({
 							position: {
@@ -150,49 +150,57 @@
 							}
 						})
 					);
-				// } else if (symbol == -2148) {
-				// 	triggers2.push(
-				// 		new Boundary({
-				// 			position: {
-				// 				x: j * 48 + offset.x,
-				// 				y: i * 48 + offset.y
-				// 			}
-				// 		})
-				// 	);
-				// } else if (symbol == -2516) {
-				// 	triggers3.push(
-				// 		new Boundary({
-				// 			position: {
-				// 				x: j * 48 + offset.x,
-				// 				y: i * 48 + offset.y
-				// 			}
-				// 		})
-				// 	);
-				// } else if (symbol == -2260) {
-				// 	triggers4.push(
-				// 		new Boundary({
-				// 			position: {
-				// 				x: j * 48 + offset.x,
-				// 				y: i * 48 + offset.y
-				// 			}
-				// 		})
-				// 	);
-				// } else if (symbol == -2520) {
-				// 	triggers5.push(
-				// 		new Boundary({
-				// 			position: {
-				// 				x: j * 48 + offset.x,
-				// 				y: i * 48 + offset.y
-				// 			}
-				// 		})
-				// 	);
-				// }
+				} else if (symbol === 2148) {
+					triggers2.push(
+						new Boundary({
+							position: {
+								x: j * 48 + offset.x,
+								y: i * 48 + offset.y
+							}
+						})
+					);
+				} else if (symbol === 2516) {
+					triggers3.push(
+						new Boundary({
+							position: {
+								x: j * 48 + offset.x,
+								y: i * 48 + offset.y
+							}
+						})
+					);
+				} else if (symbol === 2260) {
+					triggers4.push(
+						new Boundary({
+							position: {
+								x: j * 48 + offset.x,
+								y: i * 48 + offset.y
+							}
+						})
+					);
+				} else if (symbol === 2520) {
+					triggers5.push(
+						new Boundary({
+							position: {
+								x: j * 48 + offset.x,
+								y: i * 48 + offset.y
+							}
+						})
+					);
+				}
 			});
 		});
 
-		console.log(triggers1);
-		console.log(boundaries);
-		const movables = [background, ...boundaries, foreground, ...triggers1];
+		console.log(triggers5);
+		const movables = [
+			background,
+			...boundaries,
+			foreground,
+			...triggers1,
+			...triggers2,
+			...triggers3,
+			...triggers4,
+			...triggers5
+		];
 
 		const rectCollision = ({ rectangle1, rectangle2 }) => {
 			return (
@@ -321,18 +329,18 @@
 			triggers1.forEach((boundary) => {
 				boundary.draw();
 			});
-			// triggers2.forEach((boundary) => {
-			// 	boundary.draw();
-			// });
-			// triggers3.forEach((boundary) => {
-			// 	boundary.draw();
-			// });
-			// triggers4.forEach((boundary) => {
-			// 	boundary.draw();
-			// });
-			// triggers5.forEach((boundary) => {
-			// 	boundary.draw();
-			// });
+			triggers2.forEach((boundary) => {
+				boundary.draw();
+			});
+			triggers3.forEach((boundary) => {
+				boundary.draw();
+			});
+			triggers4.forEach((boundary) => {
+				boundary.draw();
+			});
+			triggers5.forEach((boundary) => {
+				boundary.draw();
+			});
 
 			player.draw();
 			foreground.draw();
